@@ -1,0 +1,1 @@
+Favicon from [Freepik](https://www.freepik.com/icon/light-bulb_3409564#fromView=keyword&page=1&position=57&uuid=e234babb-f6d7-42fb-bf45-b85ee5f726de)
