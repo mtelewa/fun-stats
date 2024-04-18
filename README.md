@@ -1,110 +1,237 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Fun Stats Website</h1>
 
-Welcome Mohamed Tarek,
+[View the deployed project here](https://mtelewa.github.io/fun-stats)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+<!-- ![Mockup](documentation/features/mockup.png) -->
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Contents
+* [User Experience (UX)](#user-experience-ux) 
+* [Design](#design)
+    * [Color scheme](#color-scheme)
+    * [Typography](#typography)
+    * [Imagery](#imagery)
+    * [Wireframes](#wireframes)
+    * [Accessibility](#accessibility)
+* [Features](#features)
+* [Technologies Used](#technologies-used)
+    * [Languages](#languages)
+    * [Frameworks, Libraries & Programs](#frameworks-libraries--programs)
+* [Testing](#testing)
+    * [Validator Testing](#validator-testing)
+    * [Browser Compatibility](#browser-compatibility)
+    * [Accessibility and Performance](#accessibility-and-performance)
+    * [Test Cases and Results](#test-cases-and-results)
+    * [Known Bugs](#known-bugs)
+* [Deployment & Local Development](#deployment--local-development)
+    * [Deployment](#deployment)
+    * [Local Development](#local-development)
+* [Credits](#credits)
+    * [Code Used](#code-used)
+    * [Content](#content)
+    * [Media](#media)
+    * [Acknowledgement](#acknowledgement)
 
-`python3 -m http.server`
+- - -
 
-A blue button should appear to click: _Make Public_,
+## User Experience (UX)
 
-Another blue button should appear to click: _Open Browser_.
+### User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### First Time Visitor Goals
 
-A blue button should appear to click: _Make Public_,
+* 
 
-Another blue button should appear to click: _Open Browser_.
+#### Returning Visitor Goals
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* 
 
-To log into the Heroku toolbelt CLI:
+#### Frequent Visitor Goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- - -
 
-------
+## Design
 
-## Release History
+### Color Scheme
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The colors chosen were based on 
+<br>
+<br>
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Typography
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Google Fonts was used to import the chosen fonts. The three main fonts used across the website are
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+* 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Imagery
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Wireframes
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Accessibility
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The website is as accessible as possible. Specifically by following these good-practice guidelines
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- - - 
 
-------
+### Features
 
-## FAQ about the uptime script
+The website consists of 
+* 
 
-**Why have you added this script?**
+The main features of the website are
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* 
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+* Future Implementations that shall allow returning and frequent users to visit more often
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+    * 
 
-**So….?**
+- - -
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Technologies Used
 
-**Can I opt out?**
+### Languages
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* HTML5
+* CSS3
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Frameworks, Libraries & Programs 
 
-**Anything more?**
+* [Git](https://git-scm.com/) for version control
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+* [Github](https://github.com/) to store code and other files
 
----
+* [GitPod](https://gitpod.io/) IDE to create and edit the codes
 
-Happy coding!
+* [Google Fonts](https://fonts.google.com/) to import the fonts used on the website.
+
+* [Google Developer Tools](https://developers.google.com/web/tools) for troubleshooting, checking responsiveness and styling
+
+* [Fonticon](https://gauger.io/fonticon/) to create the favicon
+
+* [Ilovemage](https://www.iloveimg.com/) to compress and resize images
+
+* [Resize Pixel](https://www.resizepixel.com/mirror-image/) to mirror images
+
+* [IMGonline](https://www.imgonline.com.ua/eng/combine-two-images-into-one.php) to merge two images into one
+
+* [Cloud convert](https://cloudconvert.com/jpg-converter) to convert jpg to webp format
+
+* [Techsini](https://techsini.com/multi-mockup/) to show the website image on a range of devices
+
+* [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) to check the performance, quality, and correctness of the webpage
+
+* [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to simulate other accessibility needs
+
+
+- - -
+
+
+## Testing
+
+### Validator Testing
+
+
+
+### Browser Compatibility
+
+* Testing has been carried out on the following browsers :
+    * Chrome 123.0.6312.86 (Official Build) (64-bit)
+    * Chrome 123.0.6312.99
+    * Firefox 124.0.1 (64-bit) 
+
+### Accessibility and performance
+
+
+
+
+### Test Cases and Results
+
+The following test cases were performed on each page
+
+`index.html`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+
+
+
+
+
+### Known Bugs
+
+* 
+
+
+- - -
+
+
+## Deployment & Local Development
+
+### Deployment
+
+The website is deployed using GitHub Pages. To Deploy the website:
+
+1. Go to the [fun-stats](https://github.com/mtelewa/fun-stats/) repository for this project on Github - this was the initial name of the website
+2. Navigate to settings/pages
+3. From the source dropdown select "Deploy from a branch" and press save
+4. The site has now been deployed and the website goes live
+
+### Local Development
+
+#### How to Fork
+
+To fork the repository:
+
+1. Go to the [fun-stats](https://github.com/mtelewa/fun-stats/) repository
+2. Click the "Fork" button in the top right corner.
+
+#### How to Clone
+
+To clone the repository:
+
+1. Go to the [fun-stats](https://github.com/mtelewa/fun-stats/) repository
+2. Click on the "Code" button, select "SSH" and copy the link
+3. Open the terminal and change the current working directory to the location you want the cloned directory to be in
+4. Use the command `git clone git@github.com:mtelewa/fun-stats.git` into the terminal
+
+Note: For step no.4 to work, first generate SSH keys and add your generated key in Account Settings -> SSH Keys. More on this can be found on the [github docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+
+- - -
+
+## Credits
+
+### Code Used
+
+* Hover two elements simultaneously [snippet](https://stackoverflow.com/questions/1462360/css-hover-one-element-effect-for-multiple-elements)
+
+
+### Content
+
+* 
+
+### Media
+
+* [Arts image](https://www.freepik.com/free-vector/hand-drawn-picasso-style-illustration_30116612.htm#fromView=search&page=1&position=28&uuid=295e314d-5d8b-44e0-aaad-a850a83522c4)
+* [Science image](https://www.freepik.com/free-photo/dna-closely_922865.htm#fromView=search&page=1&position=14&uuid=0a791cee-f404-42cf-b709-93f87efbe547)
+* [Sports image](https://unsplash.com/photos/group-of-men-playing-soccer-DRtKiuN9_Mk)
+* [Histoty image](https://www.freepik.com/free-photo/books-library_9282653.htm#fromView=search&page=1&position=0&uuid=80eae2e5-56c0-460d-abce-7f36864e2de8)
+
+
+
+### Acknowledgement
+
+I would like to thank my Code Institute mentor Jubril Akolade for his feedback and support
