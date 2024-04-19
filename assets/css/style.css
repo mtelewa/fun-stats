@@ -24,7 +24,9 @@ h1 {
 
 h2, h3 {
     font-family: "Indie Flower", serif;
+    font-size: 200%;
 }
+
 
 p, ul {
     font-family: Platypi, serif;
@@ -98,7 +100,7 @@ p, ul {
     display: none;
 }
 
-#game-rules #game-rules-box {
+#game-rules-box {
     display: none;
 }
 
@@ -183,7 +185,7 @@ p, ul {
     }
 
     #game-rules-box {
-        width: 30vh;
+        width: 100vh;
     }
 
 }

@@ -66,7 +66,7 @@ The colors chosen were based on
 
 Google Fonts was used to import the chosen fonts. The three main fonts used across the website are
 
-* 
+* The `Indie Flower` font was inspired by [this page on Medium](https://bootcamp.uxdesign.cc/10-best-script-and-handwritten-google-fonts-afc4b77fdb0c)
 
 ### Imagery
 
