@@ -10,7 +10,7 @@
 }
 
 body {
-    background: radial-gradient(farthest-corner at top, #e8e9f0,#cbccdd,#adafc9,#9092b6,#7275a3,#5a5d8a,#46496c,#33354e);
+    background: radial-gradient(1000px at top, #e8e9f0,#cbccdd,#adafc9,#9092b6,#7275a3,#5a5d8a,#46496c,#33354e);
     min-height: 100vh;      
     display: flex;
     flex-direction: column;
@@ -69,8 +69,8 @@ p, ul {
 
 /* category-image box */
 .category-image {
-    width: 40vh;
-    height: 40vh;
+    width: 30vh;
+    height: 30vh;
 }
 
 
@@ -108,6 +108,7 @@ p, ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 10px 0px;
 }
 
 /* Target all game rules descendents*/
@@ -124,12 +125,12 @@ p, ul {
 
 /* The box where game rules and questions are displayed */
 #game-rules-box {
-    margin-top: 10px;
+    margin: 10px;
     border: 3px solid rgba(191,191,191,0.4);
     border-radius: 15px;
     box-shadow: 10px 10px 0px rgb(0 0 0 / 0.2);  
-    width: 30vh;
-    text-align: left;
+    width: 25vh;
+    text-align: justify;
     padding: 10px 40px;
 }
 
@@ -175,6 +176,15 @@ p, ul {
         width: 100vh;
     }
 
+    /* category-image box */
+    .category-image {
+        width: 40vh;
+        height: 40vh;
+    }
+
+    #game-rules-box {
+        width: 30vh;
+    }
 
 }
 
