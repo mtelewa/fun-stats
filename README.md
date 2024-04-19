@@ -57,7 +57,7 @@
 
 ### Color Scheme
 
-The colors chosen were based on 
+The colors chosen were based on pantone colot palette like [this](https://icolorpalette.com/color/pantone-10239-c). This was inspired by the book "Color Harmony" by Leatrice Eiseman.
 <br>
 <br>
 
@@ -66,6 +66,9 @@ The colors chosen were based on
 
 Google Fonts was used to import the chosen fonts. The three main fonts used across the website are
 
+
+* [Segwick Ave](https://fonts.google.com/specimen/Sedgwick+Ave)
+* [Platypi](https://fonts.google.com/specimen/Platypi)
 * The `Indie Flower` font was inspired by [this page on Medium](https://bootcamp.uxdesign.cc/10-best-script-and-handwritten-google-fonts-afc4b77fdb0c)
 
 ### Imagery
@@ -217,7 +220,8 @@ Note: For step no.4 to work, first generate SSH keys and add your generated key 
 ### Code Used
 
 * 
-* Hover to zoom effect[snippet](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
+* Hover to zoom effect [snippet](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
+* Add hyperlink to background image [snippet](https://stackoverflow.com/questions/3778611/how-do-i-add-a-hyperlink-to-a-background-image)
 
 ### Content
 
