@@ -27,7 +27,6 @@ h1 {
     font-family: "Sedgwick Ave", sans-serif;
 }
 
-
 h2, h3 {
     font-family: "Patrick Hand", serif;
 }
@@ -40,8 +39,6 @@ p {
     text-align: center;
 }
 
-
-
 /* Hover effects: zoom on icon and text and change text color */
 .category:hover {
     -ms-transform: scale(1.1); /* IE 9 */
@@ -51,7 +48,7 @@ p {
 }
 
 
-
+/* categories flex container contains `category` boxes*/
 #categories {
     display: flex;
     flex-wrap: wrap;
@@ -59,6 +56,7 @@ p {
     justify-content: center;
 }
 
+/* category box also a flex container containing `category-image` and `category-label` boxes*/
 .category {
     display: flex;
     flex-wrap: wrap;
@@ -68,11 +66,14 @@ p {
     padding: 20px 30px;
 }
 
+/* category-image box */
 .category-image {
     width: 40vh;
     height: 40vh;
 }
 
+
+/* images in the category boxes */
 #arts {
     background: url("../images/7638588.jpg") no-repeat center center/cover;
 }
@@ -87,26 +88,52 @@ p {
 }
 
 
-
-/* Game rules toggle (opens p) */
-#game-rules-box:checked~p {
+/* Game rules toggle (opens border-box) */
+#game-rules-check-box:checked~.border-box {
     display: block;
 }
 
-#game-rules-box {
+#game-rules-check-box {
     display: none;
 }
 
-#game-rules p {
-    /* display: none; */
+#game-rules .border-box {
+    display: none;
 }
 
-/* Target the content in paragraphs*/
+#game-rules {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Target all game rules descendents*/
+#game-rules * {
+    color: #e8e9f0;
+}
+
+#game-rules h3:hover {
+    color: #fcb03f;
+}
+
+
+
+/* The border box where game info and questions are displayed */
 .border-box {
     border: 3px solid rgba(191,191,191,0.4);
-    box-shadow: 3px 3px rgba(191,191,191,0.4);
-    margin: 0 5px 10px 10px;  
-    text-align: justify; 
+    border-radius: 15px;
+    margin-top: 10px;
+    /* box-shadow: 3px 3px rgba(191,191,191,0.4); */
+    width: 30vh;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);  
+}
+
+
+
+ul {
+    list-style-type: none;
 }
 
 
@@ -130,6 +157,10 @@ p {
     h3 {
         font-size: 250%;
         margin-top: 2vh;
+    }
+
+    p {
+        font-size: 150%;
     }
 
 
