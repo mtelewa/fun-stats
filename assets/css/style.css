@@ -1,12 +1,7 @@
 /* Import fonts */
 
-/* Platypi */
-@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
-/* Sedgwick */
-@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap');
-/* Patrick Hand*/
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Platypi:ital,wght@0,300..800;1,300..800&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap');
-
+/* Platypi, Sedgwick and Indie Flower */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Platypi:ital,wght@0,300..800;1,300..800&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap');
 
 /* Apply to all elements (override browser defaults) */
 * {
@@ -28,10 +23,10 @@ h1 {
 }
 
 h2, h3 {
-    font-family: "Patrick Hand", serif;
+    font-family: "Indie Flower", serif;
 }
 
-p {
+p, ul {
     font-family: Platypi, serif;
 }
 
@@ -118,6 +113,7 @@ p {
 /* Target all game rules descendents*/
 #game-rules * {
     color: #e8e9f0;
+    margin-top: 2vh;
 }
 
 #game-rules h3:hover {
@@ -128,19 +124,21 @@ p {
 
 /* The box where game rules and questions are displayed */
 #game-rules-box {
+    margin-top: 10px;
     border: 3px solid rgba(191,191,191,0.4);
     border-radius: 15px;
-    margin-top: 10px;
     box-shadow: 10px 10px 0px rgb(0 0 0 / 0.2);  
     width: 30vh;
+    text-align: left;
+    padding: 10px 40px;
 }
 
 
 
 /* remove bullet points fromt the unordered list */
-ul {
+/* ul {
     list-style-type: none;
-}
+} */
 
 
 
@@ -165,8 +163,16 @@ ul {
         margin-top: 2vh;
     }
 
-    p {
+    ul {
         font-size: 150%;
+    }
+
+    p {
+        font-size: 110%;
+    }
+
+    #game-rules-box {
+        width: 100vh;
     }
 
 
