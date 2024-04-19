@@ -216,8 +216,8 @@ Note: For step no.4 to work, first generate SSH keys and add your generated key 
 
 ### Code Used
 
-* Hover two elements simultaneously [snippet](https://stackoverflow.com/questions/1462360/css-hover-one-element-effect-for-multiple-elements)
-
+* 
+* Hover to zoom effect[snippet](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
 
 ### Content
 
