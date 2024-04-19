@@ -45,6 +45,7 @@ p {
     -webkit-transform: scale(1.1); /* Safari 3-8 */
     transform: scale(1.1); 
     color: #fcb03f;
+    box-shadow: 5px 5px 5px rgb(252 176 63);
 }
 
 
@@ -64,12 +65,11 @@ p {
     align-items: center;
     justify-content: center;
     margin: 20px;
+    color:white;
     /* box properties */
     border: 3px solid rgba(191,191,191,0.4);
-    /* border: 0 3px 10px rgb(0 0 0 / 0.2);   */
     border-radius: 10px;
     box-shadow: 10px 10px 0px rgb(0 0 0 / 0.2);  
-
 }
 
 /* category-image box */
