@@ -14,6 +14,7 @@ body {
     min-height: 100vh;      
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* header margin */
@@ -124,7 +125,7 @@ p, ul {
 /* Target all game rules descendents*/
 #game-rules * {
     color: #e8e9f0;
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
 }
 
 #game-rules h3:hover, #footer-items *:hover {
@@ -137,6 +138,27 @@ p, ul {
     width: 25vh;
     text-align: justify;
     padding: 10px 40px;
+}
+
+
+
+/* quiz pages */
+
+button {
+
+    border-radius: 10px;
+    /* font-size: 16px; */
+    background-color: transparent;
+    /* max-width: 130px; */
+    /* margin:10px auto; */
+    display:block;
+    margin: auto;
+    text-align:center;
+    cursor: pointer;
+    /* width:20vw; */
+    padding: 15px;
+    color: #e8e9f0;
+    
 }
 
 
@@ -184,8 +206,11 @@ p, ul {
 
     h3 {
         font-size: 250%;
-        margin-top: 2vh;
     }
+
+    /* #game-rules h3 {
+        margin-top: 2vh;
+    } */
 
     ul {
         font-size: 150%;
@@ -208,7 +233,6 @@ p, ul {
     /* footer container */
     #footer-box{
         width: 50%;
-        margin: auto;
     }
 
 }
