@@ -125,7 +125,6 @@ p, ul {
 /* Target all game rules descendents*/
 #game-rules * {
     color: #e8e9f0;
-    /* margin-top: 2vh; */
 }
 
 #game-rules h3:hover, #footer-items *:hover {
@@ -145,20 +144,16 @@ p, ul {
 /* quiz pages */
 
 button {
-
-    border-radius: 10px;
-    /* font-size: 16px; */
+    /* border-radius: 20px; */
     background-color: transparent;
-    /* max-width: 130px; */
-    /* margin:10px auto; */
-    display:block;
+    display: block;
     margin: auto;
     text-align:center;
     cursor: pointer;
     /* width:20vw; */
-    padding: 15px;
+    /* max-width: 130px; */
+    padding: 5px 15px;
     color: #e8e9f0;
-    
 }
 
 
