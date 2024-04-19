@@ -63,7 +63,13 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 30px;
+    margin: 20px;
+    /* box properties */
+    border: 3px solid rgba(191,191,191,0.4);
+    /* border: 0 3px 10px rgb(0 0 0 / 0.2);   */
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px rgb(0 0 0 / 0.2);  
+
 }
 
 /* category-image box */
@@ -89,7 +95,7 @@ p {
 
 
 /* Game rules toggle (opens border-box) */
-#game-rules-check-box:checked~.border-box {
+#game-rules-check-box:checked~#game-rules-box {
     display: block;
 }
 
@@ -97,7 +103,7 @@ p {
     display: none;
 }
 
-#game-rules .border-box {
+#game-rules #game-rules-box {
     display: none;
 }
 
@@ -120,18 +126,18 @@ p {
 
 
 
-/* The border box where game info and questions are displayed */
-.border-box {
+/* The box where game rules and questions are displayed */
+#game-rules-box {
     border: 3px solid rgba(191,191,191,0.4);
     border-radius: 15px;
     margin-top: 10px;
-    /* box-shadow: 3px 3px rgba(191,191,191,0.4); */
+    box-shadow: 10px 10px 0px rgb(0 0 0 / 0.2);  
     width: 30vh;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);  
 }
 
 
 
+/* remove bullet points fromt the unordered list */
 ul {
     list-style-type: none;
 }
