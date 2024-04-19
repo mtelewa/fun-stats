@@ -26,8 +26,18 @@
     <!-- Main -->
     <main>
         <section>
-            <div class="quiz">
-                <!-- Hiii -->
+            <div id="quiz">
+                <div id="question">
+                    <h2> How many cells in the human body? </h2>
+                </div>
+
+                <div id="answer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+
+                <div id="score">
+
+                </div>
             </div>
 
         </section>
@@ -35,7 +45,7 @@
 
         <section>
             
-            <button type="button" name="home" onclick="location.href='index.html'"> <h3> Change category </h3> </button>
+            <button type="button" name="home" class="box-border-shadow" onclick="location.href='index.html'"> <h3> Change Category </h3> </button>
             <div id="game-rules">                  
                 <label for="game-rules-check-box"> <h3>Game Rules</h3> </label>
                 <input type="checkbox" id="game-rules-check-box">
