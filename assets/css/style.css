@@ -166,9 +166,12 @@ h2, h3 {
     justify-content: center;
     width: 70%;
     margin-bottom: 40px;
-    padding: 25px 0 15px 0;
+    padding: 25px 10px 15px 10px;
 }
 
+#question {
+    margin-bottom: 10px;
+}
 
 
 #answer p {

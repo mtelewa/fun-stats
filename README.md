@@ -139,6 +139,8 @@ The main features of the website are
 
 * [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to simulate other accessibility needs
 
+* [Color Picker](https://imagecolorpicker.com/en)
+
 
 - - -
 

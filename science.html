@@ -29,21 +29,14 @@
             <div id="quiz-container"> 
                 <div id="quiz" class="box-border-shadow">
                     <div id="question">
-                        <h2> How many cells in the human body? </h2>
+                        <h2 class="center-text"> How many cells in the human body? <br> (in millions)</h2>
                     </div>
 
                     <div id="answer">
-                        <label for="answer-range">10 Mi</label>
-                        <input type="range" min="10e6" max="30e6" value="20e6" step="5e6" list="answer-range" id="slider">
-                        <label for="answer-range">30 Mi</label>
-                        <p class="center-text" id="range-value">Your choice: 20 Mi</p>
-                        <datalist id="answer-range">
-                            <option>10e6</option>
-                            <option>15e6</option>
-                            <option>20e6</option>
-                            <option>25e6</option>
-                            <option>30e6</option>
-                        </datalist>
+                        <label for="answer-range">1</label>
+                        <input type="range" min="0" max="6" value="0" step="1" id="slider">
+                        <label for="answer-range">100</label>
+                        <p class="center-text" id="chosen-value"> Your Choice: </p>
                         <button type="submit" name="submit" class="box-border-shadow" id="submit-button"> <h3> Submit </h3>  </button>
                     </div>
 
