@@ -165,15 +165,17 @@ h2, h3 {
     align-items: center;
     justify-content: center;
     width: 70%;
-    margin-bottom: 50px;
-    padding: 25px;
+    margin-bottom: 40px;
+    padding: 25px 0 15px 0;
 }
 
 
 
+#answer p {
+    padding: 20px 0;
+}
 
-
-#answer label, #score * {
+#answer label, #answer p, #score * {
     font-size: 20px;
 }
 
@@ -190,11 +192,9 @@ button {
 }
 
 #submit-button {
-    margin: 10px auto 10px auto ;
+    margin: 10px auto 25px auto ;
     padding: 1px 5px;
-    color: black;
-    box-shadow: none;
-    border-color: black;
+    box-shadow: 5px 5px 0px rgb(0 0 0 / 0.2);
 }
 
 #home-button {
@@ -203,9 +203,17 @@ button {
     color: #e8e9f0;
 }
 
+button h3 {
+    font-size: 1.5rem;
+}
 
 
-
+#score {
+    padding: 5px 15px;
+    color: black;
+    box-shadow: none;
+    border-color: black;
+}
 
 
 

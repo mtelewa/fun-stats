@@ -33,24 +33,21 @@
                     </div>
 
                     <div id="answer">
-                        <span>
-                            <label for="range-range">10 Mi</label>
-                            <input type="range" min="10e6" max="30e6" value="20e6" step="5e6" list="answer-range" id="slider">
-                            <label for="range-range">30 Tr</label>
-                            <datalist id="answer-range">
-                                <option>10e6</option>
-                                <option>15e6</option>
-                                <option>20e6</option>
-                                <option>25e6</option>
-                                <option>30e6</option>
-                            </datalist>
-                        </span>
-                        <span> 
-                            <button type="submit" name="submit" class="box-border-shadow" id="submit-button"> <h3> Submit </h3>  </button>
-                        </span>
+                        <label for="answer-range">10 Mi</label>
+                        <input type="range" min="10e6" max="30e6" value="20e6" step="5e6" list="answer-range" id="slider">
+                        <label for="answer-range">30 Mi</label>
+                        <p class="center-text" id="range-value">Your choice: 20 Mi</p>
+                        <datalist id="answer-range">
+                            <option>10e6</option>
+                            <option>15e6</option>
+                            <option>20e6</option>
+                            <option>25e6</option>
+                            <option>30e6</option>
+                        </datalist>
+                        <button type="submit" name="submit" class="box-border-shadow" id="submit-button"> <h3> Submit </h3>  </button>
                     </div>
 
-                    <div id="score">
+                    <div id="score" class="box-border-shadow">
                         <span> Your score: </span>
                         <span id="score-value"> 25 </span>
                     </div>
