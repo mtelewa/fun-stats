@@ -141,20 +141,69 @@ p, ul {
 
 
 
+
+
+
+
+
+
+
+
+
 /* quiz pages */
 
+#quiz-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quiz {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 50px;
+    padding:50px;
+}
+
 button {
-    /* border-radius: 20px; */
     background-color: transparent;
-    display: block;
-    margin: auto;
     text-align:center;
     cursor: pointer;
-    /* width:20vw; */
-    /* max-width: 130px; */
     padding: 5px 15px;
     color: #e8e9f0;
+    display: block;
+    /* width:20vw; */
+    /* max-width: 130px; */
 }
+
+#submit-button {
+    margin: 10px auto 10px auto ;
+    padding: 5px;
+    box-shadow: none;
+    border-color: black;
+    color: black;
+}
+
+#home-button {
+    margin: auto;
+}
+
+#answer label {
+    font-size: 20px;
+    font-family: Platypi;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -202,10 +251,6 @@ button {
     h3 {
         font-size: 250%;
     }
-
-    /* #game-rules h3 {
-        margin-top: 2vh;
-    } */
 
     ul {
         font-size: 150%;

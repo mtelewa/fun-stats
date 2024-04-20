@@ -26,26 +26,41 @@
     <!-- Main -->
     <main>
         <section>
-            <div id="quiz">
-                <div id="question">
-                    <h2> How many cells in the human body? </h2>
-                </div>
+            <div id="quiz-container"> 
+                <div id="quiz" class="box-border-shadow">
+                    <div id="question">
+                        <h2> How many cells in the human body? </h2>
+                    </div>
 
-                <div id="answer">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                </div>
+                    <div id="answer">
+                        <span>
+                            <label for="range-range">10 Mi</label>
+                            <input type="range" min="10e6" max="30e6" value="20e6" step="5e6" list="answer-range" class="slider" id="sldier-range">
+                            <label for="range-range">30 Tr</label>
+                            <datalist id="answer-range">
+                                <option>10e6</option>
+                                <option>15e6</option>
+                                <option>20e6</option>
+                                <option>25e6</option>
+                                <option>30e6</option>
+                            </datalist>
+                        </span>
+                        <span> 
+                            <button type="submit" name="submit" class="box-border-shadow" id="submit-button"> <h3> Submit </h3>  </button>
+                        </span>
+                    </div>
 
-                <div id="score">
+                    <div id="score">
 
+                    </div>
                 </div>
             </div>
-
         </section>
 
 
         <section>
             
-            <button type="button" name="home" class="box-border-shadow" onclick="location.href='index.html'"> <h3> Change Category </h3> </button>
+            <button type="button" name="home" class="box-border-shadow" id="home-button" onclick="location.href='index.html'"> <h3> Change Category </h3> </button>
             <div id="game-rules">                  
                 <label for="game-rules-check-box"> <h3>Game Rules</h3> </label>
                 <input type="checkbox" id="game-rules-check-box">
