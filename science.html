@@ -28,14 +28,12 @@
         <section>
             <div id="quiz-container"> 
                 <div id="quiz" class="box-border-shadow">
-                    <div id="question">
-                        <h2 class="center-text"></h2>
-                    </div>
+                    <div id="question" class="center-text"></div>
 
                     <div id="answer">
-                        <label for="answer-range">1</label>
+                        <label for="answer-range" id="min-value"></label>
                         <input type="range" min="0" max="6" value="0" step="1" id="slider">
-                        <label for="answer-range">100</label>
+                        <label for="answer-range" id ="max-value"></label>
                         <p class="center-text" id="chosen-value"></p>
                         <button type="submit" name="submit" class="box-border-shadow" id="submit-button"> <h3> Submit </h3>  </button>
                     </div>
