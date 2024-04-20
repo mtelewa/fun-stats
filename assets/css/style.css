@@ -17,6 +17,11 @@ body {
     justify-content: flex-start;
 }
 
+main {
+    /* make main take up any surplus space to push the footer down */
+    flex: 1 0 auto;
+}
+
 /* header margin */
 h1 {
     margin: 5vh;
