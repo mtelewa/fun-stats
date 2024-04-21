@@ -264,6 +264,7 @@ button h3 {
 
 
 /* The Modal (background) */
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -283,7 +284,7 @@ button h3 {
   .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 0 20px 20px 0;
+    padding: 0 20px 40px 0;
     border: 1px solid #888;
     border-radius: 15px;
     width: 40%;
