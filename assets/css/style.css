@@ -188,9 +188,10 @@ h2, h3 {
 }
 
 
-/* #slider {
-    
-} */
+#slider {
+    cursor: pointer;
+    outline: none;       /* remove the focus box border imposed by JS */
+}
 
 
 
@@ -205,6 +206,7 @@ button {
     margin: 10px auto 25px auto ;
     padding: 1px 5px;
     box-shadow: 5px 5px 0px rgb(0 0 0 / 0.2);
+
 }
 
 #home-button {
@@ -294,7 +296,7 @@ button h3 {
 
 
     #quiz {
-        width: 50%;
+        width: 60%;
     }
 
 
