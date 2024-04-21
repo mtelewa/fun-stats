@@ -43,7 +43,6 @@ Add event listener to the user input*/
 document.addEventListener("DOMContentLoaded", function() {
 
     displayQuestion()
-    displayAnswer()
     fetchUserAnswer()
 
 
@@ -115,14 +114,15 @@ function displayQuestion() {
 
 
 /**
- * prints the answers range to the screen based on the random number created from displayQuestion function
+ * prints the answer range to the screen based on the random number created from displayQuestion function
+ * and records the user answer and sends to be checked to the checkAnswer function
  */
-function displayAnswer() {
-    // Min, max and user-chosen values
-    let slider = document.getElementById('slider');
-    // focus on slider when page is loaded
-    slider.focus();
+function fetchUserAnswer() {
 
+    let slider = document.getElementById('slider');
+    let submitButton = document.getElementById('submit-button');
+
+    // Min, max and user-chosen values
     let outChosen = document.getElementById('chosen-value');
     let outMin = document.getElementById('min-value');
     let outMax = document.getElementById('max-value');
@@ -132,45 +132,48 @@ function displayAnswer() {
 
     // home page does not have the slider object and so `slider` will be null
     if (slider != null) {
+
       // default value is printed in the output paragraph unless changed by the user
       outChosen.innerHTML = `Your choice: ${answersRange[slider.value]}`;
       outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
       outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
 
+      // slider eventlisteners
+
+      // focus on slider when page is loaded
+      slider.focus();
+
+      // log the user's chosen value to the page as they move the slider
       slider.addEventListener('input', function() {
-          outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;
-      
+          outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
+      })
+
+      // submit the answer when the Enter key is pressed while the user is on the slider
+      slider.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          checkAnswer()
+        }
+      })
+
+      // submit the answer when the user clicks the submit button
+      submitButton.addEventListener('click', function(event) {
+          checkAnswer()
       })
 
       let userAnswerIndex = slider.value
 
-      slider.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-          console.log('submit pressed')
-        }
-      })
+
       
     return userAnswerIndex
+
     }
 
 }
 
 
-function fetchUserAnswer() {
-    let submitButon = document.getElementById('submit-button')
-    
-    submitButon.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-        console.log('submit pressed')
-      }
-    })
-    
-}
-
-
 
 function checkAnswer() {
-
+  console.log('Yohooo')
 }
 
 
