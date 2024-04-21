@@ -29,19 +29,27 @@
                 <div id="quiz" class="box-border-shadow">
                     <div id="question" class="center-text"></div>
 
+                    
                     <div id="answer">
+                        <!-- range min -->
                         <label for="answer-range" id="min-value"></label>
+                        <!-- slider-->
                         <input type="range" min="0" max="6" value="3" step="1" id="slider">
+                        <!-- range max -->
                         <label for="answer-range" id ="max-value"></label>
+                        <!-- current slider value -->
                         <p class="center-text" id="chosen-value"></p>
+                        <!-- submit answer button -->
                         <button type="submit" name="submit" class="box-border-shadow" id="submit-button"> <h3> Submit </h3>  </button>
-                        <!-- The Modal -->
+                        <!-- The Modal (shows in case of wrong answer) -->
                         <div id="myModal" class="modal">
                             <!-- Modal content -->
                             <div class="modal-content">
+                                <!-- close button -->
                                 <span class="close">&times;</span>
+
                                 <p>Game Over!</p>
-                                <p id="final-score"> Your score is 0 </p>
+                                <p id="final-score"></p>
                                 <span> Change Category</span>
                                 <span> Try Again</span>
                             </div>
