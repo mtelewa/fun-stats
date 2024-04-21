@@ -17,7 +17,7 @@ questionsDB = [
       answerArray : [1, 3, 5, 7, 10, 20, 50],
       correctAnswerIndex : 3
     }, 
-    { category : 'arts',
+    { category : 'history',
       question : `How many paintings did Picasso produce?`,
       answerArray : [1, 3, 5, 7, 10, 20, 50],
       correctAnswerIndex : 3
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
       
       })
 
-      fetchQuestions()
+      displayQuestion()
     
     }
 
@@ -59,14 +59,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-function displayQuestion(id) {
-    let question = document.getElementById('question');
-    question.innerHTML = `<h2> ${questionsDB[0]['question']} </h2>`;
-}
+// function displayQuestion(id) {
+
+// }
 
 
 /**
- * This function masks the database to omit the entries that do not have the category in question 
+ * masks the database to omit the entries that do not have the category in question 
  * @returns an array of objects containing only a cetain category as the value.
  */
 
@@ -107,6 +106,17 @@ function fetchQuestions() {
     return categoryQuestions
 
 }
+
+/**
+ * prints the question to the screen based on an integer random number from 1 to 30
+ */
+function displayQuestion() {
+    let randomNum = Math.floor(Math.random() * 2);
+    let question = document.getElementById('question');
+    question.innerHTML = `<h2> ${fetchQuestions()[randomNum]['question']} </h2>`;
+}
+
+
 
 
 function checkAnswer() {
