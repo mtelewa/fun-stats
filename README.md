@@ -221,9 +221,9 @@ Note: For step no.4 to work, first generate SSH keys and add your generated key 
 
 ### Code Used
 
-* Add ticks to range [snippet](https://stackoverflow.com/questions/26612700/ticks-for-type-range-html-input)
 * Hover to zoom effect [snippet](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
 * Add hyperlink to background image [snippet](https://stackoverflow.com/questions/3778611/how-do-i-add-a-hyperlink-to-a-background-image)
+* Modal window [snippet](https://www.w3schools.com/howto/howto_css_modals.asp)
 
 ### Content
 
