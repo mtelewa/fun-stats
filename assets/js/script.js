@@ -219,9 +219,9 @@ function checkAnswer() {
 
 
 function incrementScore(points) {
-  let oldScore = parseInt(document.getElementById("score-value").innerText);
-  let newScore = oldScore + points;
-  document.getElementById("score-value").innerText = newScore;
+    let oldScore = parseInt(document.getElementById("score-value").innerText);
+    let newScore = oldScore + points;
+    document.getElementById("score-value").innerText = newScore;
 }
 
 
