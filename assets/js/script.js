@@ -44,13 +44,13 @@ const questionsDB = [
       answerArray : [1, 3, 5, 7, 10, 20, 50],
       correctAnswerIndex : 3
     }, 
-]
+]   
+
+// create a random number array between 0 and 19. The array length is the same as the number of questions in each category, N = 20
+let randomNumArray = Array.from({length: 10}, () => Math.floor(Math.random() * 10));
 
 
-let randomNum = Math.floor(Math.random() * 3);    // creates a random number between 0 and 19. The number of questions in each category is 20
-
-
-/* Wait for the DOM to finish loading before running the quiz
+/* wait for the DOM to finish loading before running the quiz
 Add event listener to the user input*/
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -198,12 +198,13 @@ function checkAnswer() {
       } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
         incrementScore(1)         // increment score by 1 point
       } else {                    // show the modal
+
         var modal = document.getElementById("myModal");
         modal.style.display = "block";
         // get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var closeModal = document.getElementsByClassName("close")[0];
         // when the user clicks on <span> (x), close the modal
-        span.onclick = function() {
+        closeModal.onclick = function() {
           modal.style.display = "none";
         }
         // when the user clicks anywhere outside of the modal, close it
@@ -219,9 +220,13 @@ function checkAnswer() {
 
 
 function incrementScore(points) {
-    let oldScore = parseInt(document.getElementById("score-value").innerText);
+    let oldScore = parseInt(document.getElementById("score-value").innerHTML);
     let newScore = oldScore + points;
-    document.getElementById("score-value").innerText = newScore;
+
+    document.getElementById("score-value").innerHTML = newScore;
+    document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`
+
+
 }
 
 
