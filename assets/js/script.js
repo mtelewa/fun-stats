@@ -56,54 +56,39 @@ Add event listener to the user input*/
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  let slider = document.getElementById('slider');
-  let submitButton = document.getElementById('submit-button');
+    let slider = document.getElementById('slider');
+    let submitButton = document.getElementById('submit-button');
 
-  // Min, max and user-chosen values
-  let outChosen = document.getElementById('chosen-value');
-  let outMin = document.getElementById('min-value');
-  let outMax = document.getElementById('max-value');
-
-  // run the game
-  for (let i of randomNumArray) {
-    console.log(i)
-    let entry = fetchQuestionEntry(i);
-    console.log(i)
-    let answersRange = entry['answerArray'];
+    let entry = displayQuestion(0)
 
     // home page does not have the slider object and so `slider` will be null
     if (slider != null) {
-  
-      // default value is printed in the output paragraph unless changed by the user
-      outChosen.innerHTML = `Your choice: ${answersRange[slider.value]}`;
-      outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
-      outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
-  
-      // slider eventlisteners
-  
+
       // focus on slider when page is loaded
       slider.focus();
-  
-      // log the user's chosen value to the page as they move the slider
-      slider.addEventListener('input', function() {
-          outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
-      })
-  
+
+      // slider and button eventlisteners
+
       // event handler: submit the answer when the Enter key is pressed while the user is on the slider
       slider.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-          checkAnswer(entry)
+          checkAnswer(entry);
+          for (i=1; i<randomNumArray.length ;i++) {
+            displayQuestion(i);
+          }
         }
       })
-  
-      // event handler: submit the answer when the user clicks the submit button
-      submitButton.addEventListener('click', function(event) {
-          checkAnswer(entry)
+
+      // submit the answer when the user clicks the submit button
+      submitButton.addEventListener('click', function() {
+          checkAnswer(entry);
+          for (i=1; i<randomNumArray.length ;i++) {
+            displayQuestion(i);
+          }
       })
-  
+
     }
-  }
-  
+
 })
 
 
@@ -114,14 +99,15 @@ document.addEventListener("DOMContentLoaded", function() {
  * adapted from: https://stackoverflow.com/questions/5836833/create-an-array-with-random-values 
  */
 function shuffle(array) {
-  var tmp, current, top = array.length;
-  if(top) while(--top) {
-    current = Math.floor(Math.random() * (top + 1));
-    tmp = array[current];
-    array[current] = array[top];
-    array[top] = tmp;
-  }
-  return array;
+    var tmp, current, top = array.length;
+    if (top) while(--top) {
+      current = Math.floor(Math.random() * (top + 1));
+      tmp = array[current];
+      array[current] = array[top];
+      array[top] = tmp;
+    }
+
+    return array;
 }
 
 
@@ -129,7 +115,6 @@ function shuffle(array) {
  * masks the database to omit the entries that do not have the category in question 
  * @returns an array of objects containing only a cetain category as the value.
  */
-
 function fetchQuestions() {
     // get the category from the page header of the current page
     let category = document.getElementById('category-header').innerHTML
@@ -181,8 +166,6 @@ function fetchQuestionEntry(index) {
     let outQuestion = document.getElementById('question');
     outQuestion.innerHTML = `<h2> ${question} </h2>`;
 
-    console.log(question)
-
     return entry
 }
 
@@ -192,16 +175,35 @@ function fetchQuestionEntry(index) {
  * and records the user answer and sends to be checked to the checkAnswer function
  * @returns the integer index of the user's answer. The index is used in the answersArray
  */
-function fetchUserAnswer() {
+function displayQuestion(index) {
+    
+    let entry = fetchQuestionEntry(randomNumArray[index]);
 
-    return correctAnswer
+    // Min, max and user-chosen values
+    let outChosen = document.getElementById('chosen-value');
+    let outMin = document.getElementById('min-value');
+    let outMax = document.getElementById('max-value');
+
+    let answersRange = entry['answerArray'];
+
+    // default value is printed in the output paragraph unless changed by the user
+    outChosen.innerHTML = `Your choice: ${answersRange[slider.value]}`;
+    outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
+    outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
+
+    // log the user's chosen value to the page as they move the slider
+    slider.addEventListener('input', function() {
+      outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
+    })
+    
+    return entry
 
 }
 
 
 
 function checkAnswer(entry) {
-    console.log(entry)
+
     // home page does not have the slider object and so `slider` will be null
     if (slider != null) {
       let userAnswerIndex = parseInt(document.getElementById('slider').value)
@@ -235,17 +237,11 @@ function checkAnswer(entry) {
 
 function incrementScore(points) {
     console.log(points)
-    let oldScore = parseInt(document.getElementById("score-value").innerText);
+    let oldScore = parseInt(document.getElementById("score-value").innerHTML);
     let newScore = oldScore + points;
-
-    if (points === 1) {
-      document.getElementById("score-value").style.color = 'yellow';
-    } else if (points === 3) {
-      document.getElementById("score-value").style.color = 'green';
-    }
     
-    document.getElementById("score-value").innerText = newScore;
-    document.getElementById('final-score').innerText = `Your Score is ${newScore}`
+    document.getElementById("score-value").innerHTML = newScore;
+    document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`
 
 
 }
