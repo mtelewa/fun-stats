@@ -46,8 +46,9 @@ const questionsDB = [
     }, 
 ]   
 
-// create a random number array between 0 and 19. The array length is the same as the number of questions in each category, N = 20
-let randomNumArray = Array.from({length: 10}, () => Math.floor(Math.random() * 10));
+// generate a random number array based on the shuffle function
+for (var numArray=[], i=0 ; i<3 ; ++i) numArray[i]=i;
+let randomNumArray = shuffle(numArray);
 
 
 /* wait for the DOM to finish loading before running the quiz
@@ -63,52 +64,65 @@ document.addEventListener("DOMContentLoaded", function() {
   let outMin = document.getElementById('min-value');
   let outMax = document.getElementById('max-value');
 
+  // run the game
+  for (let i of randomNumArray) {
+    console.log(i)
+    let entry = fetchQuestionEntry(i);
+    console.log(i)
+    let answersRange = entry['answerArray'];
+
+    // home page does not have the slider object and so `slider` will be null
+    if (slider != null) {
   
+      // default value is printed in the output paragraph unless changed by the user
+      outChosen.innerHTML = `Your choice: ${answersRange[slider.value]}`;
+      outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
+      outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
   
-  let entry = fetchQuestionEntry(randomNum);
-  let answersRange = entry['answerArray'];
-
-  // home page does not have the slider object and so `slider` will be null
-  if (slider != null) {
-
-    // default value is printed in the output paragraph unless changed by the user
-    outChosen.innerHTML = `Your choice: ${answersRange[slider.value]}`;
-    outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
-    outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
-
-    // slider eventlisteners
-
-    // focus on slider when page is loaded
-    slider.focus();
-
-    // log the user's chosen value to the page as they move the slider
-    slider.addEventListener('input', function() {
-        outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
-    })
-
-    // event handler: submit the answer when the Enter key is pressed while the user is on the slider
-    slider.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-        checkAnswer()
-      }
-    })
-
-    // event handler: submit the answer when the user clicks the submit button
-    submitButton.addEventListener('click', function(event) {
-        checkAnswer()
-    })
-
+      // slider eventlisteners
+  
+      // focus on slider when page is loaded
+      slider.focus();
+  
+      // log the user's chosen value to the page as they move the slider
+      slider.addEventListener('input', function() {
+          outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
+      })
+  
+      // event handler: submit the answer when the Enter key is pressed while the user is on the slider
+      slider.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          checkAnswer(entry)
+        }
+      })
+  
+      // event handler: submit the answer when the user clicks the submit button
+      submitButton.addEventListener('click', function(event) {
+          checkAnswer(entry)
+      })
+  
+    }
   }
-
-
-
-
-
+  
 })
 
 
 
-
+/**
+ * create a random number array between 0 and 19. The array length is the same as the number of questions in each category, N = 20
+ * The array has only unique numbers (no repeats).
+ * adapted from: https://stackoverflow.com/questions/5836833/create-an-array-with-random-values 
+ */
+function shuffle(array) {
+  var tmp, current, top = array.length;
+  if(top) while(--top) {
+    current = Math.floor(Math.random() * (top + 1));
+    tmp = array[current];
+    array[current] = array[top];
+    array[top] = tmp;
+  }
+  return array;
+}
 
 
 /**
@@ -167,6 +181,8 @@ function fetchQuestionEntry(index) {
     let outQuestion = document.getElementById('question');
     outQuestion.innerHTML = `<h2> ${question} </h2>`;
 
+    console.log(question)
+
     return entry
 }
 
@@ -178,19 +194,17 @@ function fetchQuestionEntry(index) {
  */
 function fetchUserAnswer() {
 
-
-
     return correctAnswer
 
 }
 
 
 
-function checkAnswer() {
+function checkAnswer(entry) {
+    console.log(entry)
     // home page does not have the slider object and so `slider` will be null
     if (slider != null) {
       let userAnswerIndex = parseInt(document.getElementById('slider').value)
-      let entry = fetchQuestionEntry(randomNum);
       let correctAnswerIndex = entry['correctAnswerIndex'];
 
       if (userAnswerIndex === correctAnswerIndex) {
@@ -220,11 +234,18 @@ function checkAnswer() {
 
 
 function incrementScore(points) {
-    let oldScore = parseInt(document.getElementById("score-value").innerHTML);
+    console.log(points)
+    let oldScore = parseInt(document.getElementById("score-value").innerText);
     let newScore = oldScore + points;
 
-    document.getElementById("score-value").innerHTML = newScore;
-    document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`
+    if (points === 1) {
+      document.getElementById("score-value").style.color = 'yellow';
+    } else if (points === 3) {
+      document.getElementById("score-value").style.color = 'green';
+    }
+    
+    document.getElementById("score-value").innerText = newScore;
+    document.getElementById('final-score').innerText = `Your Score is ${newScore}`
 
 
 }
