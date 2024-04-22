@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
           checkAnswer(entry);
           for (i=1; i<randomNumArray.length ;i++) {
             displayQuestion(i);
+            checkAnswer(displayQuestion(i));
           }
         }
       })
@@ -84,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
           checkAnswer(entry);
           for (i=1; i<randomNumArray.length ;i++) {
             displayQuestion(i);
+            checkAnswer(displayQuestion(i));
           }
       })
 
