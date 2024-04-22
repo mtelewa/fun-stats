@@ -57,7 +57,7 @@ Add event listener to the user input*/
 document.addEventListener("DOMContentLoaded", function() {
 
     let slider = document.getElementById('slider');
-    let submitButton = document.getElementById('submit-button');
+    
 
     // home page does not have the slider object and so `slider` will be null
     if (slider != null) {
@@ -67,29 +67,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // slider and button eventlisteners
 
-      let entry = displayQuestion(0);
+      runGame();
 
-      // event handler: submit the answer when the Enter key is pressed while the user is on the slider
-      slider.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-          let points = checkAnswer(entry)
-          if (points !=0) {
-            incrementScore(points);
-          }
-        }
-      })
-
-      // submit the answer when the user clicks the submit button
-      submitButton.addEventListener('click', function() {
-        let points = checkAnswer(entry)
-        if (points !=0) {
-          incrementScore(points);
-        }
-      })
-
-
-    }
-
+    }    
+  
 })
 
 
@@ -114,7 +95,7 @@ function shuffle(array) {
 
 /**
  * masks the database to omit the entries that do not have the category in question 
- * @returns an array of objects containing only a cetain category as the value.
+ * @ returns an array of objects containing only a cetain category as the value.
  */
 function fetchQuestions() {
     // get the category from the page header of the current page
@@ -209,30 +190,20 @@ function checkAnswer(entry) {
     let correctAnswerIndex = entry['correctAnswerIndex'];
     let points = 0;
 
+    console.log(entry)
+
     console.log(userAnswerIndex, correctAnswerIndex)
 
     if (userAnswerIndex === correctAnswerIndex) {
-      points = 3         // increment score by 3 points
-      
+      incrementScore(3);         // increment score by 3 points
+      runGame()
+
     } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
-      points = 1         // increment score by 1 point
+      incrementScore(1)        // increment score by 1 point
+      runGame()
 
-    } else {                    // show the modal
-
-      var modal = document.getElementById("myModal");
-      modal.style.display = "block";
-      // get the <span> element that closes the modal
-      var closeModal = document.getElementsByClassName("close")[0];
-      // when the user clicks on <span> (x), close the modal
-      closeModal.onclick = function() {
-        modal.style.display = "none";
-      }
-      // when the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
+    } else {                    
+      endGame()                // show the modal (game over!)
     }
 
     return points
@@ -241,19 +212,58 @@ function checkAnswer(entry) {
 
 
 function incrementScore(points) {
-    console.log(points)
     let oldScore = parseInt(document.getElementById("score-value").innerHTML);
     let newScore = oldScore + points;
     
     document.getElementById("score-value").innerHTML = newScore;
     document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`
-
 }
 
 
-function runGame() {
+
+function runGame(index) {
     // for (i=1; i<randomNumArray.length ;i++) {
-    displayQuestion(1);
-     checkAnswer(displayQuestion(1));
-    // }
+
+    let submitButton = document.getElementById('submit-button');
+    let entry = displayQuestion(index);
+
+    // event handler: submit the answer when the Enter key is pressed while the user is on the slider
+    slider.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        checkAnswer(entry)
+      }
+    })
+
+    // submit the answer when the user clicks the submit button
+    submitButton.addEventListener('click', function() {
+      checkAnswer(entry)
+
+    })
+
 }
+
+
+
+
+
+function endGame() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    // get the <span> element that closes the modal
+    var closeModal = document.getElementsByClassName("close")[0];
+    // when the user clicks on <span> (x), close the modal
+    closeModal.onclick = function() {
+      modal.style.display = "none";
+    }
+    // when the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+}
+
+
+
+
+
