@@ -59,8 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let slider = document.getElementById('slider');
     let submitButton = document.getElementById('submit-button');
 
-    let entry = displayQuestion(0)
-
     // home page does not have the slider object and so `slider` will be null
     if (slider != null) {
 
@@ -69,25 +67,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // slider and button eventlisteners
 
+      let entry = displayQuestion(0);
+
       // event handler: submit the answer when the Enter key is pressed while the user is on the slider
       slider.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-          checkAnswer(entry);
-          for (i=1; i<randomNumArray.length ;i++) {
-            displayQuestion(i);
-            checkAnswer(displayQuestion(i));
+          let points = checkAnswer(entry)
+          if (points !=0) {
+            incrementScore(points);
           }
         }
       })
 
       // submit the answer when the user clicks the submit button
       submitButton.addEventListener('click', function() {
-          checkAnswer(entry);
-          for (i=1; i<randomNumArray.length ;i++) {
-            displayQuestion(i);
-            checkAnswer(displayQuestion(i));
-          }
+        let points = checkAnswer(entry)
+        if (points !=0) {
+          incrementScore(points);
+        }
       })
+
 
     }
 
@@ -189,7 +188,7 @@ function displayQuestion(index) {
     let answersRange = entry['answerArray'];
 
     // default value is printed in the output paragraph unless changed by the user
-    outChosen.innerHTML = `Your choice: ${answersRange[slider.value]}`;
+    outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;
     outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
     outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
 
@@ -206,33 +205,37 @@ function displayQuestion(index) {
 
 function checkAnswer(entry) {
 
-    // home page does not have the slider object and so `slider` will be null
-    if (slider != null) {
-      let userAnswerIndex = parseInt(document.getElementById('slider').value)
-      let correctAnswerIndex = entry['correctAnswerIndex'];
+    let userAnswerIndex = parseInt(document.getElementById('slider').value)
+    let correctAnswerIndex = entry['correctAnswerIndex'];
+    let points = 0;
 
-      if (userAnswerIndex === correctAnswerIndex) {
-        incrementScore(3)         // increment score by 3 points
-      } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
-        incrementScore(1)         // increment score by 1 point
-      } else {                    // show the modal
+    console.log(userAnswerIndex, correctAnswerIndex)
 
-        var modal = document.getElementById("myModal");
-        modal.style.display = "block";
-        // get the <span> element that closes the modal
-        var closeModal = document.getElementsByClassName("close")[0];
-        // when the user clicks on <span> (x), close the modal
-        closeModal.onclick = function() {
+    if (userAnswerIndex === correctAnswerIndex) {
+      points = 3         // increment score by 3 points
+      
+    } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
+      points = 1         // increment score by 1 point
+
+    } else {                    // show the modal
+
+      var modal = document.getElementById("myModal");
+      modal.style.display = "block";
+      // get the <span> element that closes the modal
+      var closeModal = document.getElementsByClassName("close")[0];
+      // when the user clicks on <span> (x), close the modal
+      closeModal.onclick = function() {
+        modal.style.display = "none";
+      }
+      // when the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
           modal.style.display = "none";
-        }
-        // when the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
         }
       }
     }
+
+    return points
     
 }
 
@@ -245,7 +248,12 @@ function incrementScore(points) {
     document.getElementById("score-value").innerHTML = newScore;
     document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`
 
-
 }
 
 
+function runGame() {
+    // for (i=1; i<randomNumArray.length ;i++) {
+    displayQuestion(1);
+     checkAnswer(displayQuestion(1));
+    // }
+}
