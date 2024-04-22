@@ -41,15 +41,17 @@
 
 #### First Time Visitor Goals
 
-* 
+* I want to get informed about some interesting and shocking facts
+* I want to increase my knowledge in different topics
+
 
 #### Returning Visitor Goals
 
-* 
+* I want to know more facts and check out different topics
 
 #### Frequent Visitor Goals
 
-* 
+* I want to improve my score and solve as many questions with the exact correct answer
 
 - - -
 
@@ -57,23 +59,28 @@
 
 ### Color Scheme
 
-The colors chosen were based on pantone colot palette like [this](https://icolorpalette.com/color/pantone-10239-c). This was inspired by the book "Color Harmony" by Leatrice Eiseman.
+The colors chosen were based on pantone colot palette like [this](https://icolorpalette.com/color/pantone-10239-c). This was inspired by the "Extraterrestrial" color palette in the book "Color Harmony" by Leatrice Eiseman. The colors are to represent a deep dive into each category, also an increasing level of difficulty as the user progresses.
 <br>
 <br>
+
+<p align="center">
+    <img src="documentation/design/color-palette.png" alt="Color Palette" height="50%">
+</p>
 
 
 ### Typography
 
 Google Fonts was used to import the chosen fonts. The three main fonts used across the website are
 
-
 * [Segwick Ave](https://fonts.google.com/specimen/Sedgwick+Ave)
 * [Platypi](https://fonts.google.com/specimen/Platypi)
 * The `Indie Flower` font was inspired by [this page on Medium](https://bootcamp.uxdesign.cc/10-best-script-and-handwritten-google-fonts-afc4b77fdb0c)
 
+These fonts were chosen to convey the playful nature of the website since it is a quiz. Also, I wanted to deliver this hand-written feeling to attract users from different ages.
+
 ### Imagery
 
-
+* The icons chosen next to the topic header are to reflect the topic nature
 
 ### Wireframes
 
@@ -110,6 +117,7 @@ The main features of the website are
 
 * HTML5
 * CSS3
+* JavaScript
 
 ### Frameworks, Libraries & Programs 
 
@@ -123,15 +131,9 @@ The main features of the website are
 
 * [Google Developer Tools](https://developers.google.com/web/tools) for troubleshooting, checking responsiveness and styling
 
-* [Fonticon](https://gauger.io/fonticon/) to create the favicon
+* [Fontawesome](https://fontawesome.com/) for the icons near the header
 
 * [Ilovemage](https://www.iloveimg.com/) to compress and resize images
-
-* [Resize Pixel](https://www.resizepixel.com/mirror-image/) to mirror images
-
-* [IMGonline](https://www.imgonline.com.ua/eng/combine-two-images-into-one.php) to merge two images into one
-
-* [Cloud convert](https://cloudconvert.com/jpg-converter) to convert jpg to webp format
 
 * [Techsini](https://techsini.com/multi-mockup/) to show the website image on a range of devices
 
@@ -224,6 +226,7 @@ Note: For step no.4 to work, first generate SSH keys and add your generated key 
 * Hover to zoom effect [snippet](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
 * Add hyperlink to background image [snippet](https://stackoverflow.com/questions/3778611/how-do-i-add-a-hyperlink-to-a-background-image)
 * Modal window [snippet](https://www.w3schools.com/howto/howto_css_modals.asp)
+* Create an array with random numbers [snippet](https://stackoverflow.com/questions/5836833/create-an-array-with-random-values)
 
 ### Content
 
