@@ -12,7 +12,7 @@ const questionsDB = [
       category : 'science',
       question : `How many sand grains are on Earth? <br> (in sextillions)`,
       answerArray : [1, 3, 5, 7, 10, 50, 100],
-      correctAnswerIndex : 3
+      correctAnswerIndex : 5
     },
     { id : 3,
       category : 'sports',
@@ -47,30 +47,28 @@ const questionsDB = [
 ]   
 
 // generate a random number array based on the shuffle function
-for (var numArray=[], i=0 ; i<3 ; ++i) numArray[i]=i;
+for (var numArray=[], i=0 ; i<4 ; ++i) numArray[i]=i;
 let randomNumArray = shuffle(numArray);
+var oldIndex = 0;
 
 
 /* wait for the DOM to finish loading before running the quiz
-Add event listener to the user input*/
-
+Add event listener to the user input */
 document.addEventListener("DOMContentLoaded", function() {
 
     let slider = document.getElementById('slider');
     
-
     // home page does not have the slider object and so `slider` will be null
     if (slider != null) {
 
       // focus on slider when page is loaded
       slider.focus();
 
-      // slider and button eventlisteners
-
-      runGame();
+      // initial game run 
+      runGame(0);
 
     }    
-  
+
 })
 
 
@@ -135,19 +133,15 @@ function fetchQuestions() {
 
 }
 
+console.log(fetchQuestions())
+
 
 /**
  * select an entry from the categoryQuestions array based on a random number 
  * @returns the entry dictionary
  */
 function fetchQuestionEntry(index) {
-    
-    let entry = fetchQuestions()[index]     // the chosen entry from the category questions array (it is a dicitonary object) 
-    
-    let question = entry['question']
-    let outQuestion = document.getElementById('question');
-    outQuestion.innerHTML = `<h2> ${question} </h2>`;
-
+    var entry = fetchQuestions()[index]     // the chosen entry from the category questions array (it is a dicitonary object) 
     return entry
 }
 
@@ -157,18 +151,23 @@ function fetchQuestionEntry(index) {
  * and records the user answer and sends to be checked to the checkAnswer function
  * @returns the integer index of the user's answer. The index is used in the answersArray
  */
-function displayQuestion(index) {
+function displayQuestion(randomNumArrayIndex) {
     
-    let entry = fetchQuestionEntry(randomNumArray[index]);
+    entry = fetchQuestionEntry(randomNumArray[randomNumArrayIndex]);
+    console.log(randomNumArrayIndex)
+    console.log(randomNumArray[randomNumArrayIndex])
+    let question = entry['question'];
+    let answersRange = entry['answerArray'];
+    let correctAnswerIndex = entry['correctAnswerIndex'];
 
-    // Min, max and user-chosen values
+    // question, min, max and user-chosen values
+    let outQuestion = document.getElementById('question');
     let outChosen = document.getElementById('chosen-value');
     let outMin = document.getElementById('min-value');
     let outMax = document.getElementById('max-value');
 
-    let answersRange = entry['answerArray'];
-
     // default value is printed in the output paragraph unless changed by the user
+    outQuestion.innerHTML = `<h2> ${question} </h2>`;
     outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;
     outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
     outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
@@ -178,39 +177,62 @@ function displayQuestion(index) {
       outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
     })
     
-    return entry
+    return correctAnswerIndex
 
 }
 
 
+function runGame(index) {
+    // display the question
+    displayQuestion(index);
 
-function checkAnswer(entry) {
+    // submit the answer when the user clicks the submit button
+    let submitButton = document.getElementById('submit-button');
+    submitButton.addEventListener('click', handleSubmitButton);
 
-    let userAnswerIndex = parseInt(document.getElementById('slider').value)
-    let correctAnswerIndex = entry['correctAnswerIndex'];
-    let points = 0;
+    // or when the Enter key is pressed while the user is on the slider
+    slider.addEventListener('keydown', handleEnterKey);
 
-    console.log(entry)
+}
 
-    console.log(userAnswerIndex, correctAnswerIndex)
+
+/**
+ * checks the answer provided by the user by comparing the user answer index obtained from the slider value
+ * and the correct answer index (obtained from the display question function - by calling it from the entry object)
+ * @param question index
+ */
+function checkAnswer(index) {
+    console.log("check answer called")
+
+    correctAnswerIndex = displayQuestion(index);
+    let userAnswerIndex = parseInt(document.getElementById('slider').value);
+    
+    console.log("corr answ index == ", correctAnswerIndex);
+    console.log("user answ index == ", userAnswerIndex);
+
 
     if (userAnswerIndex === correctAnswerIndex) {
       incrementScore(3);         // increment score by 3 points
-      runGame()
+      oldIndex ++ ;
+      runGame(oldIndex);
+      
 
     } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
-      incrementScore(1)        // increment score by 1 point
-      runGame()
+      incrementScore(1);       // increment score by 1 point
+      oldIndex ++;
+      runGame(oldIndex);
 
     } else {                    
-      endGame()                // show the modal (game over!)
+      endGame();                // show the modal (game over!)
     }
 
-    return points
-    
 }
 
 
+/**
+ * increments the score and displays it to the user
+ * @param number of points scored - obtained from the checkAnswer function
+ */
 function incrementScore(points) {
     let oldScore = parseInt(document.getElementById("score-value").innerHTML);
     let newScore = oldScore + points;
@@ -220,32 +242,9 @@ function incrementScore(points) {
 }
 
 
-
-function runGame(index) {
-    // for (i=1; i<randomNumArray.length ;i++) {
-
-    let submitButton = document.getElementById('submit-button');
-    let entry = displayQuestion(index);
-
-    // event handler: submit the answer when the Enter key is pressed while the user is on the slider
-    slider.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-        checkAnswer(entry)
-      }
-    })
-
-    // submit the answer when the user clicks the submit button
-    submitButton.addEventListener('click', function() {
-      checkAnswer(entry)
-
-    })
-
-}
-
-
-
-
-
+/**
+ * ends the game by showing a modal window
+ */
 function endGame() {
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -264,6 +263,19 @@ function endGame() {
 }
 
 
+/**
+ * handles the enter key event
+ * @param {keyboard key down} event 
+ */
+function handleEnterKey(event) {
+  if (event.key === 'Enter') {
+    checkAnswer(oldIndex)
+  }
+};
 
-
-
+/**
+ * handles the submit button event 
+ */
+function handleSubmitButton() {
+    checkAnswer(oldIndex);
+};
