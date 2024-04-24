@@ -6,13 +6,13 @@ const questionsDB = [
       category : 'science',
       question : `How many cells in the human body? <br> (in millions)`,
       answerArray : [10, 50, 100, 1000, 10000, 40000, 100000],
-      correctAnswerIndex : 3
+      correctAnswerIndex : 5
     },
     { id : 2,
       category : 'science',
       question : `How many sand grains are on Earth? <br> (in sextillions)`,
       answerArray : [1, 3, 5, 7, 10, 50, 100],
-      correctAnswerIndex : 3
+      correctAnswerIndex : 5
     },
     { id : 3,
       category : 'sports',
@@ -36,13 +36,13 @@ const questionsDB = [
       category : 'science',
       question : `How many?`,
       answerArray : [1, 3, 5, 7, 10, 50, 100],
-      correctAnswerIndex : 3
+      correctAnswerIndex : 5
     },
     { id : 7,
       category : 'science',
       question : `How much?`,
       answerArray : [1, 3, 5, 7, 10, 20, 50],
-      correctAnswerIndex : 3
+      correctAnswerIndex : 5
     }, 
 ]   
 
@@ -192,11 +192,6 @@ function runGame(index) {
     // or when the Enter key is pressed while the user is on the slider
     slider.addEventListener('keydown', handleEnterKey);
 
-    // warn user before leaving the page that they will lose their progress
-    // window.onbeforeunload = function() {
-    //   return "Do you really want to leave this page and lose progress?";
-    // };
-
 }
 
 
@@ -210,11 +205,13 @@ function checkAnswer(index) {
 
     correctAnswerIndex = displayQuestion(index);
     let userAnswerIndex = parseInt(document.getElementById('slider').value);
+    console.log(userAnswerIndex, correctAnswerIndex)
 
     if (userAnswerIndex === correctAnswerIndex) {
       incrementScore(3);         // increment score by 3 points
       if (entryIndex < randomNumArray.length-1) {
         entryIndex ++ ;
+        slider.value = 3;        // reset slider to the middle
         runGame(entryIndex);
       } else {
         endGameWin();
@@ -223,6 +220,7 @@ function checkAnswer(index) {
       incrementScore(1);       // increment score by 1 point
       if (entryIndex < randomNumArray.length-1) {
         entryIndex ++ ;
+        slider.value = 3;        // reset slider to the middle
         runGame(entryIndex);
       } else {
         endGameWin();
