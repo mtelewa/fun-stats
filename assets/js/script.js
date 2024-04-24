@@ -188,12 +188,10 @@ function runGame(index) {
     // or when the Enter key is pressed while the user is on the slider
     slider.addEventListener('keydown', handleEnterKey);
 
-    // Warning before leaving the page (back button, or outgoinglink)
-    // window.onbeforeunload = function() {
-    //   return "Do you really want to leave this page and lose progress?";
-    // };
-
-    window.addEventListener('beforeunload', handleUnload)
+    // warn user before leaving the page that they will lose their progress
+    window.onbeforeunload = function() {
+      return "Do you really want to leave this page and lose progress?";
+    };
 
 }
 
@@ -306,13 +304,4 @@ function handleEnterKey(event) {
  */
 function handleSubmitButton() {
     checkAnswer(entryIndex);
-};
-
-
-/**
- * warn before user leaves page
- * that they will lose their progress
- */
-function handleUnload() {
-    return "Do you really want to leave this page and lose progress?"
 };
