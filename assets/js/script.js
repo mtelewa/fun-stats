@@ -1,50 +1,50 @@
 
 // Questions database (ideally this would be imported)
-
 const questionsDB = [
-    { id : 1,
-      category : 'science',
-      question : `How many cells in the human body? <br> (in millions)`,
-      answerArray : [10, 50, 100, 1000, 10000, 40000, 100000],
-      correctAnswerIndex : 5
-    },
-    { id : 2,
-      category : 'science',
-      question : `How many sand grains are on Earth? <br> (in sextillions)`,
-      answerArray : [1, 3, 5, 7, 10, 50, 100],
-      correctAnswerIndex : 5
-    },
-    { id : 3,
-      category : 'sports',
-      question : `How many times did Real Madrid win UEFA champions league?`,
-      answerArray : [1, 3, 5, 7, 10, 20, 50],
-      correctAnswerIndex : 3
-    }, 
-    { id : 4,
-      category : 'history',
-      question : `How many paintings did Picasso produce?`,
-      answerArray : [3, 4, 9, 12, 17, 20, 50],
-      correctAnswerIndex : 3
-    },
-    { id : 5,
-      category : 'arts',
-      question : `How many paintings did Picasso produce?`,
-      answerArray : [3, 4, 9, 12, 17, 20, 50],
-      correctAnswerIndex : 3
-    },     
-    { id : 6,
-      category : 'science',
-      question : `How many?`,
-      answerArray : [1, 3, 5, 7, 10, 50, 100],
-      correctAnswerIndex : 5
-    },
-    { id : 7,
-      category : 'science',
-      question : `How much?`,
-      answerArray : [1, 3, 5, 7, 10, 20, 50],
-      correctAnswerIndex : 5
-    }, 
+  { id : 1,
+    category : 'science',
+    question : `How many cells in the human body? <br> (in millions)`,
+    answerArray : [10, 50, 100, 1000, 10000, 40000, 100000],
+    correctAnswerIndex : 5
+  },
+  { id : 2,
+    category : 'science',
+    question : `How many sand grains are on Earth? <br> (in sextillions)`,
+    answerArray : [1, 3, 5, 7, 10, 50, 100],
+    correctAnswerIndex : 5
+  },
+  { id : 3,
+    category : 'sports',
+    question : `How many times did Real Madrid win UEFA champions league?`,
+    answerArray : [1, 3, 5, 7, 10, 20, 50],
+    correctAnswerIndex : 3
+  }, 
+  { id : 4,
+    category : 'history',
+    question : `How many paintings did Picasso produce?`,
+    answerArray : [3, 4, 9, 12, 17, 20, 50],
+    correctAnswerIndex : 3
+  },
+  { id : 5,
+    category : 'arts',
+    question : `How many paintings did Picasso produce?`,
+    answerArray : [3, 4, 9, 12, 17, 20, 50],
+    correctAnswerIndex : 3
+  },     
+  { id : 6,
+    category : 'science',
+    question : `How many?`,
+    answerArray : [1, 3, 5, 7, 10, 50, 100],
+    correctAnswerIndex : 5
+  },
+  { id : 7,
+    category : 'science',
+    question : `How much?`,
+    answerArray : [1, 3, 5, 7, 10, 20, 50],
+    correctAnswerIndex : 5
+  }, 
 ]   
+
 
 // generate a random number array based on the shuffle function
 for (var numArray=[], i=0 ; i<4 ; ++i) numArray[i]=i;
@@ -56,23 +56,22 @@ var entryIndex = 0;
 Add event listener to the user input */
 document.addEventListener("DOMContentLoaded", function() {
 
-    let slider = document.getElementById('slider');
-    
-    /* home page does not have the slider object and so `slider` will be null
-    this block of code will be only executed for the category pages */
-    if (slider != null) {
+  let slider = document.getElementById('slider');
+  
+  /* home page does not have the slider object and so `slider` will be null
+  this block of code will be only executed for the category pages */
+  if (slider != null) {
 
-      // reduce the size of the game rules heading text
-      document.getElementById('game-rules-heading').style.fontSize = "30px";
-      // focus on slider when page is loaded
-      slider.focus();
-      // initial game run 
-      runQuiz(0);
+    // reduce the size of the game rules heading text
+    document.getElementById('game-rules-heading').style.fontSize = "30px";
+    // focus on slider when page is loaded
+    slider.focus();
+    // initial game run 
+    runQuiz(0);
 
-    }    
+  }    
 
 })
-
 
 
 /**
@@ -81,67 +80,69 @@ document.addEventListener("DOMContentLoaded", function() {
  * adapted from: https://stackoverflow.com/questions/5836833/create-an-array-with-random-values 
  */
 function shuffle(array) {
-    var tmp, current, top = array.length;
-    if (top) while(--top) {
-      current = Math.floor(Math.random() * (top + 1));
-      tmp = array[current];
-      array[current] = array[top];
-      array[top] = tmp;
-    }
+  var tmp, current, top = array.length;
+  if (top) while(--top) {
+    current = Math.floor(Math.random() * (top + 1));
+    tmp = array[current];
+    array[current] = array[top];
+    array[top] = tmp;
+  }
 
-    return array;
+  return array;
+
 }
 
 
 /**
  * masks the database to omit the entries that do not have the category in question 
- * @ returns an array of objects containing only a cetain category as the value.
+ * @returns an array of objects containing only a cetain category as the value.
  */
 function fetchQuestions() {
-    // get the category from the page header of the current page
-    let category = document.getElementById('category-header').innerHTML
-    let categoryQuestions = []
+  // get the category from the page header of the current page
+  let category = document.getElementById('category-header').innerHTML
+  let categoryQuestions = []
 
-    // build science questions array
-    if (category.includes('Science')) {
-      // loop over the Database object
-      for (let i of questionsDB) {
-        // pick the entries in the object with a certain category
-        if (Object.values(i).includes('science')) {
-          categoryQuestions.push(i)
-        }
+  // build science questions array
+  if (category.includes('Science')) {
+    // loop over the Database object
+    for (let i of questionsDB) {
+      // pick the entries in the object with a certain category
+      if (Object.values(i).includes('science')) {
+        categoryQuestions.push(i)
       }
-    } else if (category.includes('Sports')) {
-      for (let i of questionsDB) {
-        if (Object.values(i).includes('sports')) {
-          categoryQuestions.push(i)
-        }
-      }      
-    } else if (category.includes('History')) {
-      for (let i of questionsDB) {
-        if (Object.values(i).includes('history')) {
-          categoryQuestions.push(i)
-        }
-      }      
-    } else if (category.includes('Arts')) {
-      for (let i of questionsDB) {
-        if (Object.values(i).includes('arts')) {
-          categoryQuestions.push(i)
-        }
-      }      
     }
-    
-    return categoryQuestions
+  } else if (category.includes('Sports')) {
+    for (let i of questionsDB) {
+      if (Object.values(i).includes('sports')) {
+        categoryQuestions.push(i)
+      }
+    }      
+  } else if (category.includes('History')) {
+    for (let i of questionsDB) {
+      if (Object.values(i).includes('history')) {
+        categoryQuestions.push(i)
+      }
+    }      
+  } else if (category.includes('Arts')) {
+    for (let i of questionsDB) {
+      if (Object.values(i).includes('arts')) {
+        categoryQuestions.push(i)
+      }
+    }      
+  }
+  
+  return categoryQuestions
 
 }
+
 
 /**
  * select an entry from the categoryQuestions array based on a random number 
  * @returns the entry dictionary
  */
 function fetchQuestionEntry(index) {
-    var entry = fetchQuestions()[index]     // the chosen entry from the category questions array (it is a dicitonary object) 
-    return entry
+  var entry = fetchQuestions()[index]     // the chosen entry from the category questions array (it is a dicitonary object) 
+  return entry
 }
 
 
@@ -152,45 +153,50 @@ function fetchQuestionEntry(index) {
  */
 function displayQuestion(randomNumArrayIndex) {
     
-    entry = fetchQuestionEntry(randomNumArray[randomNumArrayIndex]);
-    console.log(randomNumArrayIndex)
-    console.log(randomNumArray[randomNumArrayIndex])
-    let question = entry['question'];
-    let answersRange = entry['answerArray'];
-    let correctAnswerIndex = entry['correctAnswerIndex'];
+  entry = fetchQuestionEntry(randomNumArray[randomNumArrayIndex]);
+  console.log(randomNumArrayIndex)
+  console.log(randomNumArray[randomNumArrayIndex])
+  let question = entry['question'];
+  let answersRange = entry['answerArray'];
+  let correctAnswerIndex = entry['correctAnswerIndex'];
 
-    // question, min, max and user-chosen values
-    let outQuestion = document.getElementById('question');
-    let outChosen = document.getElementById('chosen-value');
-    let outMin = document.getElementById('min-value');
-    let outMax = document.getElementById('max-value');
+  // question, min, max and user-chosen values
+  let outQuestion = document.getElementById('question');
+  let outChosen = document.getElementById('chosen-value');
+  let outMin = document.getElementById('min-value');
+  let outMax = document.getElementById('max-value');
 
-    // default value is printed in the output paragraph unless changed by the user
-    outQuestion.innerHTML = `<h2> ${question} </h2>`;
-    outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;
-    outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
-    outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
+  // default value is printed in the output paragraph unless changed by the user
+  outQuestion.innerHTML = `<h2> ${question} </h2>`;
+  outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;
+  outMin.innerHTML = answersRange[0].toLocaleString(); // write it in a readable format
+  outMax.innerHTML = answersRange[6].toLocaleString(); // write it in a readable format
 
-    // log the user's chosen value to the page as they move the slider
-    slider.addEventListener('input', function() {
-      outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
-    })
-    
-    return correctAnswerIndex
+  // log the user's chosen value to the page as they move the slider
+  slider.addEventListener('input', function() {
+    outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
+  })
+  
+  return correctAnswerIndex
 
 }
 
 
+/**
+ * runs the quiz game by displaying the question and handling event listener events 
+ * to trigger the checkAnswer function
+ * @param question index 
+ */
 function runQuiz(index) {
-    // display the question
-    displayQuestion(index);
+  // display the question
+  displayQuestion(index);
 
-    // submit the answer when the user clicks the submit button
-    let submitButton = document.getElementById('submit-button');
-    submitButton.addEventListener('click', handleSubmitButton);
+  // submit the answer when the user clicks the submit button
+  let submitButton = document.getElementById('submit-button');
+  submitButton.addEventListener('click', handleSubmitButton);
 
-    // or when the Enter key is pressed while the user is on the slider
-    slider.addEventListener('keydown', handleEnterKey);
+  // or when the Enter key is pressed while the user is on the slider
+  slider.addEventListener('keydown', handleEnterKey);
 
 }
 
@@ -201,33 +207,33 @@ function runQuiz(index) {
  * @param question index
  */
 function checkAnswer(index) {
-    console.log("check answer called")
+  console.log("check answer called")
 
-    correctAnswerIndex = displayQuestion(index);
-    let userAnswerIndex = parseInt(document.getElementById('slider').value);
-    console.log(userAnswerIndex, correctAnswerIndex)
+  correctAnswerIndex = displayQuestion(index);
+  let userAnswerIndex = parseInt(document.getElementById('slider').value);
+  console.log(userAnswerIndex, correctAnswerIndex)
 
-    if (userAnswerIndex === correctAnswerIndex) {
-      incrementScore(3);         // increment score by 3 points
-      if (entryIndex < randomNumArray.length-1) {
-        entryIndex ++ ;
-        slider.value = 3;        // reset slider to the middle
-        runQuiz(entryIndex);
-      } else {
-        endQuizWin();
-      }
-    } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
-      incrementScore(1);       // increment score by 1 point
-      if (entryIndex < randomNumArray.length-1) {
-        entryIndex ++ ;
-        slider.value = 3;        // reset slider to the middle
-        runQuiz(entryIndex);
-      } else {
-        endQuizWin();
-      }
-    } else {                    
-      endQuizLoss();                // show the modal (game over!)
+  if (userAnswerIndex === correctAnswerIndex) {
+    incrementScore(3);         // increment score by 3 points
+    if (entryIndex < randomNumArray.length-1) {
+      entryIndex ++ ;
+      slider.value = 3;        // reset slider to the middle
+      runQuiz(entryIndex);
+    } else {
+      endQuizWin();
     }
+  } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
+    incrementScore(1);       // increment score by 1 point
+    if (entryIndex < randomNumArray.length-1) {
+      entryIndex ++ ;
+      slider.value = 3;        // reset slider to the middle
+      runQuiz(entryIndex);
+    } else {
+      endQuizWin();
+    }
+  } else {                    
+    endQuizLoss();                // show the modal (game over!)
+  }
 
 }
 
@@ -237,11 +243,12 @@ function checkAnswer(index) {
  * @param number of points scored - obtained from the checkAnswer function
  */
 function incrementScore(points) {
-    let oldScore = parseInt(document.getElementById("score-value").innerHTML);
-    let newScore = oldScore + points;
-    
-    document.getElementById("score-value").innerHTML = newScore;
-    document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`
+  let oldScore = parseInt(document.getElementById("score-value").innerHTML);
+  let newScore = oldScore + points;
+  
+  document.getElementById("score-value").innerHTML = newScore;
+  document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`
+
 }
 
 
@@ -249,22 +256,23 @@ function incrementScore(points) {
  * ends the game (Loss!) by showing a modal window
  */
 function endQuizLoss() {
-    var modal = document.getElementById("myModal");
-    let message = document.getElementById("game-end-message");
-    modal.style.display = "block";
-    message.innerHTML = "Game Over!";
-    // get the <span> element that closes the modal
-    var closeModal = document.getElementsByClassName("close")[0];
-    // when the user clicks on <span> (x), close the modal
-    closeModal.onclick = function() {
+  var modal = document.getElementById("myModal");
+  let message = document.getElementById("game-end-message");
+  modal.style.display = "block";
+  message.innerHTML = "Game Over!";
+  // get the <span> element that closes the modal
+  var closeModal = document.getElementsByClassName("close")[0];
+  // when the user clicks on <span> (x), close the modal
+  closeModal.onclick = function() {
+    modal.style.display = "none";
+  }
+  // when the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
       modal.style.display = "none";
     }
-    // when the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+  }
+
 }
 
 
@@ -288,7 +296,8 @@ function endQuizWin() {
       modal.style.display = "none";
     }
   }
-}
+
+};
 
 
 /**
@@ -300,6 +309,7 @@ function handleEnterKey(event) {
     checkAnswer(entryIndex);
   }
 };
+
 
 /**
  * handles the submit button event 
