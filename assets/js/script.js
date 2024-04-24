@@ -1,49 +1,56 @@
 
 // Questions database (ideally this would be imported)
 const questionsDB = [
-  { id : 1,
-    category : 'science',
-    question : `How many cells in the human body? <br> (in millions)`,
-    answerArray : [10, 50, 100, 1000, 10000, 40000, 100000],
-    correctAnswerIndex : 5
+  { category: 'science',
+    question: "How many cells are there in the human body? (in millions)",
+    answerArray: [10, 50, 100, 1000, 10000, 40000, 100000],
+    correctAnswerIndex: 5
   },
-  { id : 2,
-    category : 'science',
-    question : `How many sand grains are on Earth? <br> (in sextillions)`,
-    answerArray : [1, 3, 5, 7, 10, 50, 100],
-    correctAnswerIndex : 5
+  { category: 'science',
+    question: "What is the estimated number of stars in the Milky Way galaxy?",
+    answerArray: ["100 million", "1 billion", "100 billion", "1 trillion", "100 trillion", "1 quadrillion", "100 quadrillion"],
+    correctAnswerIndex: 2
   },
-  { id : 3,
-    category : 'sports',
-    question : `How many times did Real Madrid win UEFA champions league?`,
-    answerArray : [1, 3, 5, 7, 10, 20, 50],
-    correctAnswerIndex : 3
-
-  }, 
-  { id : 4,
-    category : 'history',
-    question : `How many paintings did Picasso produce?`,
-    answerArray : [3, 4, 9, 12, 17, 20, 50],
-    correctAnswerIndex : 3
+  { category: 'science',
+    question: "How many Earths could fit inside the sun?",
+    answerArray: [100, 1000, "1 million", "1 billion", "1 trillion", "1 quadrillion", "1 quintillion"],
+    correctAnswerIndex: 3
   },
-  { id : 5,
-    category : 'arts',
-    question : `How many paintings did Picasso produce?`,
-    answerArray : [3, 4, 9, 12, 17, 20, 50],
-    correctAnswerIndex : 3
-  },     
-  { id : 6,
-    category : 'science',
-    question : `How many?`,
-    answerArray : [1, 3, 5, 7, 10, 50, 100],
-    correctAnswerIndex : 5
+  { category: 'science',
+    question: "What percentage of the Earth's surface is covered by water?",
+    answerArray: ["10%", "25%", "50%", "75%", "90%", "95%", "99%"],
+    correctAnswerIndex: 4
   },
-  { id : 7,
-    category : 'science',
-    question : `How much?`,
-    answerArray : [1, 3, 5, 7, 10, 20, 50],
-    correctAnswerIndex : 5
-  }, 
+  { category: 'science',
+    question: "How many known species of insects are there on Earth?",
+    answerArray: ["10,000", "100,000", "1 million", "10 million", "100 million", "1 billion", "10 billion"],
+    correctAnswerIndex: 6
+  },
+  { category: 'science',
+    question: "What is the estimated age of the universe in years?",
+    answerArray: ["10 million", "100 million", "1 billion", "10 billion", "100 billion", "1 trillion", "13.8 trillion"],
+    correctAnswerIndex: 6
+  },
+  { category: 'science',
+    question: "How many neurons are there in the human brain?",
+    answerArray: ["100 thousand", "1 million", "10 million", "100 million", "1 billion", "10 billion", "100 billion"],
+    correctAnswerIndex: 6
+  },
+  { category: 'science',
+    question: "What percentage of the universe is composed of dark matter?",
+    answerArray: ["5%", "10%", "25%", "50%", "75%", "90%", "95%"],
+    correctAnswerIndex: 5
+  },
+  { category: 'science',
+    question: "How many atoms are there in a single grain of sand?",
+    answerArray: ["10 million", "100 million", "1 billion", "10 billion", "100 billion", "1 trillion", "10 trillion"],
+    correctAnswerIndex: 6
+  },
+  { category: 'science',
+    question: "What percentage of the human body is made up of water?",
+    answerArray: ["50%", "60%", "70%", "80%", "90%", "95%", "99%"],
+    correctAnswerIndex: 2
+  }
 ];   
 
 
@@ -263,11 +270,13 @@ function endQuizLoss() {
   // when the user clicks on <span> (x), close the modal
   closeModal.onclick = function() {
     modal.style.display = "none";
+    window.location.reload();
   };
   // when the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
+      window.location.reload();
     }
   };
 
@@ -287,11 +296,13 @@ function endQuizWin() {
   // when the user clicks on <span> (x), close the modal
   closeModal.onclick = function() {
     modal.style.display = "none";
+    window.location.reload();
   };
   // when the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
+      window.location.reload();
     }
   };
 
