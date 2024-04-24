@@ -58,8 +58,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let slider = document.getElementById('slider');
     
-    // home page does not have the slider object and so `slider` will be null
+    /* home page does not have the slider object and so `slider` will be null
+    this block of code will be only executed for the category pages */
     if (slider != null) {
+
+      // reduce the size of the game rules heading text
+      document.getElementById('game-rules-heading').style.fontSize = "30px";
       // focus on slider when page is loaded
       slider.focus();
       // initial game run 
@@ -189,9 +193,9 @@ function runGame(index) {
     slider.addEventListener('keydown', handleEnterKey);
 
     // warn user before leaving the page that they will lose their progress
-    window.onbeforeunload = function() {
-      return "Do you really want to leave this page and lose progress?";
-    };
+    // window.onbeforeunload = function() {
+    //   return "Do you really want to leave this page and lose progress?";
+    // };
 
 }
 
@@ -250,7 +254,7 @@ function endGameLoss() {
     var modal = document.getElementById("myModal");
     let message = document.getElementById("game-end-message");
     modal.style.display = "block";
-    // message.innerHTML = "Game Over!";
+    message.innerHTML = "Game Over!";
     // get the <span> element that closes the modal
     var closeModal = document.getElementsByClassName("close")[0];
     // when the user clicks on <span> (x), close the modal
@@ -273,7 +277,7 @@ function endGameWin() {
   var modal = document.getElementById("myModal");
   let message = document.getElementById("game-end-message");
   modal.style.display = "block";
-  message.innerHTML = `Congrats! <br> You've solved all the questions!`
+  message.innerHTML = `Congrats! <br> You've solved all the questions!`;
   // get the <span> element that closes the modal
   var closeModal = document.getElementsByClassName("close")[0];
   // when the user clicks on <span> (x), close the modal
@@ -295,7 +299,7 @@ function endGameWin() {
  */
 function handleEnterKey(event) {
   if (event.key === 'Enter') {
-    checkAnswer(entryIndex)
+    checkAnswer(entryIndex);
   }
 };
 
