@@ -227,6 +227,7 @@ Note: For step no.4 to work, first generate SSH keys and add your generated key 
 * Add hyperlink to background image [snippet](https://stackoverflow.com/questions/3778611/how-do-i-add-a-hyperlink-to-a-background-image)
 * Modal window [snippet](https://www.w3schools.com/howto/howto_css_modals.asp)
 * Create an array with random numbers [snippet](https://stackoverflow.com/questions/5836833/create-an-array-with-random-values)
+* Slider styling [snippet](https://blog.logrocket.com/creating-custom-css-range-slider-javascript-upgrades/)
 
 ### Content
 

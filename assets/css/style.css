@@ -145,18 +145,6 @@ h2, h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* quiz pages ------------------------------------------*/
 
 #quiz-container {
@@ -190,13 +178,51 @@ h2, h3 {
 }
 
 
+/* Slider */
+
 #slider {
+    -webkit-appearance: none;
+    appearance: none;
     cursor: pointer;
     outline: none;       /* remove the focus box border imposed by JS */
-    width: 40vw; /* width of slider */
+    margin: 0 20px;
+    width: 40vw;
+    border-radius: 16px;
+    overflow: hidden;          
+}
+
+#slider::-webkit-slider-runnable-track {
+    height: 15px;
+    border-radius: 16px;
+}
+
+#slider::-moz-range-track {
+    height: 15px;
+    border-radius: 16px;
+}
+  
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #f50;
+    box-shadow: -407px 0 0 400px #f50;
+}
+  
+#slider::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #f50;
+    box-shadow: -407px 0 0 400px #f50;
 }
 
 
+/* Buttons and score window */
 
 button {
     background-color: transparent;
@@ -228,9 +254,6 @@ button {
 
 
 
-
-
-
 /* Footer -----------------------------------------*/
 
 /* footer container */
@@ -258,12 +281,7 @@ button {
 
 
 
-
-
-
-
-
-/* The Modal (background) */
+/* Modal window -----------------------------------------*/
 
 .modal {
     display: none; /* Hidden by default */
@@ -273,8 +291,8 @@ button {
     left: 0;
     top: 0;
     text-align: center;
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
+    width: 100vw; 
+    height: 100vh; 
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -333,15 +351,7 @@ button {
 
 
 
-
-
-
-
-
-
-
-
-/* Responsive design */
+/* Responsive design ---------------------------------*/
 
 /* Media query: for tablets and larger (768px and up) */
 
@@ -384,7 +394,7 @@ button {
     }
 
     #slider {
-        width: 30vw; /* width of slider */
+        width: 30vw;
     }
     
 
@@ -396,8 +406,7 @@ button {
 }
 
 
-
-/* Media query: for tablets and larger (768px and up) */
+/* Media query: for tablets and larger (1024px and up) */
 
 @media screen and (min-width:1024px) {
     #game-rules-box {
