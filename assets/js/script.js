@@ -6,13 +6,13 @@ const questionsDB = [
       category : 'science',
       question : `How many cells in the human body? <br> (in millions)`,
       answerArray : [10, 50, 100, 1000, 10000, 40000, 100000],
-      correctAnswerIndex : 5
+      correctAnswerIndex : 3
     },
     { id : 2,
       category : 'science',
       question : `How many sand grains are on Earth? <br> (in sextillions)`,
       answerArray : [1, 3, 5, 7, 10, 50, 100],
-      correctAnswerIndex : 5
+      correctAnswerIndex : 3
     },
     { id : 3,
       category : 'sports',
@@ -49,7 +49,7 @@ const questionsDB = [
 // generate a random number array based on the shuffle function
 for (var numArray=[], i=0 ; i<4 ; ++i) numArray[i]=i;
 let randomNumArray = shuffle(numArray);
-var oldIndex = 0;
+var entryIndex = 0;
 
 
 /* wait for the DOM to finish loading before running the quiz
@@ -60,10 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // home page does not have the slider object and so `slider` will be null
     if (slider != null) {
-
       // focus on slider when page is loaded
       slider.focus();
-
       // initial game run 
       runGame(0);
 
@@ -133,9 +131,6 @@ function fetchQuestions() {
 
 }
 
-console.log(fetchQuestions())
-
-
 /**
  * select an entry from the categoryQuestions array based on a random number 
  * @returns the entry dictionary
@@ -193,6 +188,13 @@ function runGame(index) {
     // or when the Enter key is pressed while the user is on the slider
     slider.addEventListener('keydown', handleEnterKey);
 
+    // Warning before leaving the page (back button, or outgoinglink)
+    // window.onbeforeunload = function() {
+    //   return "Do you really want to leave this page and lose progress?";
+    // };
+
+    window.addEventListener('beforeunload', handleUnload)
+
 }
 
 
@@ -206,24 +208,25 @@ function checkAnswer(index) {
 
     correctAnswerIndex = displayQuestion(index);
     let userAnswerIndex = parseInt(document.getElementById('slider').value);
-    
-    console.log("corr answ index == ", correctAnswerIndex);
-    console.log("user answ index == ", userAnswerIndex);
-
 
     if (userAnswerIndex === correctAnswerIndex) {
       incrementScore(3);         // increment score by 3 points
-      oldIndex ++ ;
-      runGame(oldIndex);
-      
-
+      if (entryIndex < randomNumArray.length-1) {
+        entryIndex ++ ;
+        runGame(entryIndex);
+      } else {
+        endGameWin();
+      }
     } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
       incrementScore(1);       // increment score by 1 point
-      oldIndex ++;
-      runGame(oldIndex);
-
+      if (entryIndex < randomNumArray.length-1) {
+        entryIndex ++ ;
+        runGame(entryIndex);
+      } else {
+        endGameWin();
+      }
     } else {                    
-      endGame();                // show the modal (game over!)
+      endGameLoss();                // show the modal (game over!)
     }
 
 }
@@ -243,11 +246,13 @@ function incrementScore(points) {
 
 
 /**
- * ends the game by showing a modal window
+ * ends the game (Loss!) by showing a modal window
  */
-function endGame() {
+function endGameLoss() {
     var modal = document.getElementById("myModal");
+    let message = document.getElementById("game-end-message");
     modal.style.display = "block";
+    // message.innerHTML = "Game Over!";
     // get the <span> element that closes the modal
     var closeModal = document.getElementsByClassName("close")[0];
     // when the user clicks on <span> (x), close the modal
@@ -264,12 +269,35 @@ function endGame() {
 
 
 /**
+ * ends the game (Win!) by showing a modal window
+ */
+function endGameWin() {
+  var modal = document.getElementById("myModal");
+  let message = document.getElementById("game-end-message");
+  modal.style.display = "block";
+  message.innerHTML = `Congrats! <br> You've solved all the questions!`
+  // get the <span> element that closes the modal
+  var closeModal = document.getElementsByClassName("close")[0];
+  // when the user clicks on <span> (x), close the modal
+  closeModal.onclick = function() {
+    modal.style.display = "none";
+  }
+  // when the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+
+
+/**
  * handles the enter key event
  * @param {keyboard key down} event 
  */
 function handleEnterKey(event) {
   if (event.key === 'Enter') {
-    checkAnswer(oldIndex)
+    checkAnswer(entryIndex)
   }
 };
 
@@ -277,5 +305,14 @@ function handleEnterKey(event) {
  * handles the submit button event 
  */
 function handleSubmitButton() {
-    checkAnswer(oldIndex);
+    checkAnswer(entryIndex);
+};
+
+
+/**
+ * warn before user leaves page
+ * that they will lose their progress
+ */
+function handleUnload() {
+    return "Do you really want to leave this page and lose progress?"
 };
