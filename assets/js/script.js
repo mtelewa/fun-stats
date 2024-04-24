@@ -18,6 +18,7 @@ const questionsDB = [
     question : `How many times did Real Madrid win UEFA champions league?`,
     answerArray : [1, 3, 5, 7, 10, 20, 50],
     correctAnswerIndex : 3
+
   }, 
   { id : 4,
     category : 'history',
@@ -153,12 +154,11 @@ function fetchQuestionEntry(index) {
  */
 function displayQuestion(randomNumArrayIndex) {
     
-  entry = fetchQuestionEntry(randomNumArray[randomNumArrayIndex]);
-  console.log(randomNumArrayIndex)
-  console.log(randomNumArray[randomNumArrayIndex])
+  let entry = fetchQuestionEntry(randomNumArray[randomNumArrayIndex]);
   let question = entry['question'];
   let answersRange = entry['answerArray'];
   let correctAnswerIndex = entry['correctAnswerIndex'];
+  let slider = document.getElementById('slider');
 
   // question, min, max and user-chosen values
   let outQuestion = document.getElementById('question');
@@ -196,6 +196,7 @@ function runQuiz(index) {
   submitButton.addEventListener('click', handleSubmitButton);
 
   // or when the Enter key is pressed while the user is on the slider
+  let slider = document.getElementById('slider');
   slider.addEventListener('keydown', handleEnterKey);
 
 }
@@ -207,11 +208,10 @@ function runQuiz(index) {
  * @param question index
  */
 function checkAnswer(index) {
-  console.log("check answer called")
-
+  // get correct answer index from the database object
   correctAnswerIndex = displayQuestion(index);
   let userAnswerIndex = parseInt(document.getElementById('slider').value);
-  console.log(userAnswerIndex, correctAnswerIndex)
+  let slider = document.getElementById('slider');
 
   if (userAnswerIndex === correctAnswerIndex) {
     incrementScore(3);         // increment score by 3 points
