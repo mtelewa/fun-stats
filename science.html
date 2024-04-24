@@ -53,8 +53,10 @@
                                 <p id="final-score"> Your Score is 0</p>
 
                                 <!-- change category and try again buttons -->
-                                <span> Change Category</span>
-                                <span> Try Again</span>
+                                <div id="modal-buttons"> 
+                                    <button type="button" name="submit" class="box-border-shadow modal-button" onclick="location.href='index.html'"> <p>Change Category</p> </button>
+                                    <button type="reset" name="submit" class="box-border-shadow modal-button" onClick="window.location.reload();"> <p>Try again</p> </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -72,7 +74,7 @@
             
             <button type="button" name="home" class="box-border-shadow" id="home-button" onclick="location.href='index.html'"> <h3> Change Category </h3> </button>
             <div id="game-rules">                  
-                <label for="game-rules-check-box"> <h3>Game Rules</h3> </label>
+                <label for="game-rules-check-box"> <h3 id="game-rules-heading">Game Rules</h3> </label>
                 <input type="checkbox" id="game-rules-check-box">
                 <div id="game-rules-box" class="box-border-shadow">
                     <ul>
