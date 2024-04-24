@@ -44,7 +44,7 @@ const questionsDB = [
     answerArray : [1, 3, 5, 7, 10, 20, 50],
     correctAnswerIndex : 5
   }, 
-]   
+];   
 
 
 // generate a random number array based on the shuffle function
@@ -62,17 +62,15 @@ document.addEventListener("DOMContentLoaded", function() {
   /* home page does not have the slider object and so `slider` will be null
   this block of code will be only executed for the category pages */
   if (slider != null) {
-
     // reduce the size of the game rules heading text
     document.getElementById('game-rules-heading').style.fontSize = "30px";
     // focus on slider when page is loaded
     slider.focus();
     // initial game run 
     runQuiz(0);
-
   }    
 
-})
+});
 
 
 /**
@@ -100,8 +98,8 @@ function shuffle(array) {
  */
 function fetchQuestions() {
   // get the category from the page header of the current page
-  let category = document.getElementById('category-header').innerHTML
-  let categoryQuestions = []
+  let category = document.getElementById('category-header').innerHTML;
+  let categoryQuestions = [];
 
   // build science questions array
   if (category.includes('Science')) {
@@ -109,30 +107,30 @@ function fetchQuestions() {
     for (let i of questionsDB) {
       // pick the entries in the object with a certain category
       if (Object.values(i).includes('science')) {
-        categoryQuestions.push(i)
+        categoryQuestions.push(i);
       }
     }
   } else if (category.includes('Sports')) {
     for (let i of questionsDB) {
       if (Object.values(i).includes('sports')) {
-        categoryQuestions.push(i)
+        categoryQuestions.push(i);
       }
     }      
   } else if (category.includes('History')) {
     for (let i of questionsDB) {
       if (Object.values(i).includes('history')) {
-        categoryQuestions.push(i)
+        categoryQuestions.push(i);
       }
     }      
   } else if (category.includes('Arts')) {
     for (let i of questionsDB) {
       if (Object.values(i).includes('arts')) {
-        categoryQuestions.push(i)
+        categoryQuestions.push(i);
       }
     }      
   }
   
-  return categoryQuestions
+  return categoryQuestions;
 
 }
 
@@ -142,8 +140,8 @@ function fetchQuestions() {
  * @returns the entry dictionary
  */
 function fetchQuestionEntry(index) {
-  var entry = fetchQuestions()[index]     // the chosen entry from the category questions array (it is a dicitonary object) 
-  return entry
+  var entry = fetchQuestions()[index];     // the chosen entry from the category questions array (it is a dicitonary object) 
+  return entry;
 }
 
 
@@ -155,12 +153,12 @@ function fetchQuestionEntry(index) {
 function displayQuestion(randomNumArrayIndex) {
     
   let entry = fetchQuestionEntry(randomNumArray[randomNumArrayIndex]);
-  let question = entry['question'];
-  let answersRange = entry['answerArray'];
-  let correctAnswerIndex = entry['correctAnswerIndex'];
-  let slider = document.getElementById('slider');
+  let question = entry.question;
+  let answersRange = entry.answerArray;
+  let correctAnswerIndex = entry.correctAnswerIndex;
 
   // question, min, max and user-chosen values
+  let slider = document.getElementById('slider');
   let outQuestion = document.getElementById('question');
   let outChosen = document.getElementById('chosen-value');
   let outMin = document.getElementById('min-value');
@@ -175,9 +173,9 @@ function displayQuestion(randomNumArrayIndex) {
   // log the user's chosen value to the page as they move the slider
   slider.addEventListener('input', function() {
     outChosen.innerHTML = `Your choice: ${answersRange[slider.value].toLocaleString()}`;      
-  })
+  });
   
-  return correctAnswerIndex
+  return correctAnswerIndex;
 
 }
 
@@ -209,7 +207,7 @@ function runQuiz(index) {
  */
 function checkAnswer(index) {
   // get correct answer index from the database object
-  correctAnswerIndex = displayQuestion(index);
+  let correctAnswerIndex = displayQuestion(index);
   let userAnswerIndex = parseInt(document.getElementById('slider').value);
   let slider = document.getElementById('slider');
 
@@ -247,7 +245,7 @@ function incrementScore(points) {
   let newScore = oldScore + points;
   
   document.getElementById("score-value").innerHTML = newScore;
-  document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`
+  document.getElementById('final-score').innerHTML = `Your Score is ${newScore}`;
 
 }
 
@@ -265,13 +263,13 @@ function endQuizLoss() {
   // when the user clicks on <span> (x), close the modal
   closeModal.onclick = function() {
     modal.style.display = "none";
-  }
+  };
   // when the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  }
+  };
 
 }
 
@@ -289,15 +287,15 @@ function endQuizWin() {
   // when the user clicks on <span> (x), close the modal
   closeModal.onclick = function() {
     modal.style.display = "none";
-  }
+  };
   // when the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  }
+  };
 
-};
+}
 
 
 /**
@@ -308,7 +306,7 @@ function handleEnterKey(event) {
   if (event.key === 'Enter') {
     checkAnswer(entryIndex);
   }
-};
+}
 
 
 /**
@@ -316,4 +314,4 @@ function handleEnterKey(event) {
  */
 function handleSubmitButton() {
     checkAnswer(entryIndex);
-};
+}
