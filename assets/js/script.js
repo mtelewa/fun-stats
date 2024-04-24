@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // focus on slider when page is loaded
       slider.focus();
       // initial game run 
-      runGame(0);
+      runQuiz(0);
 
     }    
 
@@ -181,7 +181,7 @@ function displayQuestion(randomNumArrayIndex) {
 }
 
 
-function runGame(index) {
+function runQuiz(index) {
     // display the question
     displayQuestion(index);
 
@@ -212,21 +212,21 @@ function checkAnswer(index) {
       if (entryIndex < randomNumArray.length-1) {
         entryIndex ++ ;
         slider.value = 3;        // reset slider to the middle
-        runGame(entryIndex);
+        runQuiz(entryIndex);
       } else {
-        endGameWin();
+        endQuizWin();
       }
     } else if (userAnswerIndex === correctAnswerIndex+1 || userAnswerIndex === correctAnswerIndex-1) {
       incrementScore(1);       // increment score by 1 point
       if (entryIndex < randomNumArray.length-1) {
         entryIndex ++ ;
         slider.value = 3;        // reset slider to the middle
-        runGame(entryIndex);
+        runQuiz(entryIndex);
       } else {
-        endGameWin();
+        endQuizWin();
       }
     } else {                    
-      endGameLoss();                // show the modal (game over!)
+      endQuizLoss();                // show the modal (game over!)
     }
 
 }
@@ -248,7 +248,7 @@ function incrementScore(points) {
 /**
  * ends the game (Loss!) by showing a modal window
  */
-function endGameLoss() {
+function endQuizLoss() {
     var modal = document.getElementById("myModal");
     let message = document.getElementById("game-end-message");
     modal.style.display = "block";
@@ -271,7 +271,7 @@ function endGameLoss() {
 /**
  * ends the game (Win!) by showing a modal window
  */
-function endGameWin() {
+function endQuizWin() {
   var modal = document.getElementById("myModal");
   let message = document.getElementById("game-end-message");
   modal.style.display = "block";

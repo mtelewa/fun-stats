@@ -32,11 +32,11 @@
                     
                     <div id="answer">
                         <!-- range min -->
-                        <label for="answer-range" id="min-value"></label>
+                        <label for="slider" id="min-value"></label>
                         <!-- slider-->
                         <input type="range" min="0" max="6" value="3" step="1" id="slider">
                         <!-- range max -->
-                        <label for="answer-range" id ="max-value"></label>
+                        <label for="slider" id ="max-value"></label>
                         <!-- current slider value -->
                         <p class="center-text" id="chosen-value"></p>
                         <!-- submit answer button -->
@@ -55,7 +55,7 @@
                                 <!-- change category and try again buttons -->
                                 <div id="modal-buttons"> 
                                     <button type="button" name="submit" class="box-border-shadow modal-button" onclick="location.href='index.html'"> <p>Change Category</p> </button>
-                                    <button type="reset" name="submit" class="box-border-shadow modal-button" onClick="window.location.reload();"> <p>Try again</p> </button>
+                                    <button type="reset" name="submit" class="box-border-shadow modal-button" id="try-again-button" onClick="window.location.reload();"> <p>Try again</p> </button>
                                 </div>
                             </div>
                         </div>
