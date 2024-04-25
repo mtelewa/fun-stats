@@ -309,5 +309,110 @@
     "question": "How many dynasties ruled ancient Egypt?",
     "answerArray": ["20", "30", "50", "100", "120", "150", "200"],
     "correctAnswerIndex": 1
+  },
+  { "category": "sports",
+    "question": "What is the standard height of a basketball hoop in meters?",
+    "answerArray": ["1", "1.5", "2", "2.5", "3", "3.5", "4"],
+    "correctAnswerIndex": 4
+  },
+  { "category": "sports",
+    "question": "How many Grand Slam tennis tournaments are there in a calendar year?",
+    "answerArray": ["2", "3", "4", "5", "6", "7", "8"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "What is the maximum score possible in a single frame of snooker?",
+    "answerArray": ["110", "122", "147", "158", "172", "210", "220"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "How many laps make up the Monaco Grand Prix circuit?",
+    "answerArray": ["50", "58", "68", "78", "88", "98", "110"],
+    "correctAnswerIndex": 3
+  },
+  { "category": "sports",
+    "question": "What is the standard distance of a marathon race in kilometers?",
+    "answerArray": ["22", "32", "42", "52", "62", "72", "82"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "How many points are awarded for a bullseye in darts?",
+    "answerArray": ["20", "50", "75", "100", "125", "150", "175"],
+    "correctAnswerIndex": 1
+  },
+  { "category": "sports",
+    "question": "How many rounds are there in a professional boxing match?",
+    "answerArray": ["8", "10", "12", "14", "16", "18", "22"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "How many points is a field goal worth in basketball?",
+    "answerArray": ["1", "2", "3", "4", "5", "6", "9"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "How many Olympic gold medals did Michael Phelps win in a single Olympics?",
+    "answerArray": ["4", "6", "8", "10", "12", "14", "16"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "What is the maximum number of clubs allowed in a golfer's bag during a round?",
+    "answerArray": ["2", "4", "8", "12", "14", "16", "20"],
+    "correctAnswerIndex": 4
+  },
+  { "category": "sports",
+    "question": "How many hurdles are there in a 110m hurdles race?",
+    "answerArray": ["5", "6", "7", "8", "9", "10", "11"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "What is the standard weight of an Olympic barbell in kilograms?",
+    "answerArray": ["15", "20", "25", "30", "35", "40", "60"],
+    "correctAnswerIndex": 1
+  },
+  { "category": "sports",
+    "question": "How many times did sir alex ferguson win the league as a manager?",
+    "answerArray": ["3", "6", "8", "10", "13", "16", "18"],
+    "correctAnswerIndex": 4
+  },
+  { "category": "sports",
+    "question": "How many holes are there in a standard round of golf?",
+    "answerArray": ["9", "12", "18", "24", "30", "36", "42"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "What is the standard length of an Olympic swimming pool in meters?",
+    "answerArray": ["25", "30", "35", "40", "45", "50", "60"],
+    "correctAnswerIndex": 5
+  },
+  { "category": "sports",
+    "question": "How many players are on a standard ice hockey team?",
+    "answerArray": ["5", "6", "7", "8", "9", "10", "12"],
+    "correctAnswerIndex": 1
+  },
+  { "category": "sports",
+    "question": "What is the standard diameter of a basketball in inches?",
+    "answerArray": ["8", "9", "9.5", "10", "10.5", "11", "11.5"],
+    "correctAnswerIndex": 2
+  },
+  { "category": "sports",
+    "question": "What percentage of NFL players experience chronic traumatic encephalopathy (CTE)?",
+    "answerArray": ["10", "20", "40", "60", "70", "80", "90"],
+    "correctAnswerIndex": 6
+  },
+  { "category": "sports",
+    "question": "What is the average age of retirement for professional athletes?",
+    "answerArray": ["25", "27", "30", "32", "34", "36", "40"],
+    "correctAnswerIndex": 2
+  },
+
+  { "category": "sports",
+    "question": "How many times did Brazil win the FIFA world cup finals?",
+    "answerArray": ["2", "3", "4", "5", "6", "7", "8"],
+    "correctAnswerIndex": 2
   }
+  
+
+
+
 ]
