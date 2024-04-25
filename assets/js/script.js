@@ -160,7 +160,62 @@ const questionsDB = [
     question: "What is the highest-grossing movie of all time worldwide (in billions of dollars)?",
     answerArray: ["2", "3", "4", "5", "6", "7", "10"],
     correctAnswerIndex: 0
-  }
+  },
+  { category: 'arts',
+    question: "What is the length of the longest Hollywood movie (in minutes)?",
+    answerArray: ["160", "180", "200", "220", "260", "280", "320"],
+    correctAnswerIndex: 5
+  },
+  { category: 'arts',
+    question: "What is the average budget for a Hollywood blockbuster movie (in millions of dollars)?",
+    answerArray: ["50", "100", "150", "200", "250", "300", "400"],
+    correctAnswerIndex: 1
+  },
+  { category: 'arts',
+    question: "How many Academy Award nominations has Meryl Streep received?",
+    answerArray: ["15", "18", "21", "24", "27", "30", "35"],
+    correctAnswerIndex: 2
+  },
+  { category: 'arts',
+    question: "What is the total number of movies in the Marvel Cinematic Universe (MCU) as of 2021?",
+    answerArray: ["10", "14", "18", "24", "33", "41", "45"],
+    correctAnswerIndex: 4
+  },
+  { category: 'arts',
+    question: "What is the average age of an Academy Award winner for Best Actor?",
+    answerArray: ["35", "40", "45", "50", "55", "60", "65"],
+    correctAnswerIndex: 3
+  },
+  { category: 'arts',
+    question: "How many songs are uploaded to Spotify each day?",
+    answerArray: ["10,000", "20,000", "50,000", "100,000", "200,000", "300,000", "400,000"],
+    correctAnswerIndex: 3
+  },
+  { category: 'arts',
+    question: "How many people attended the largest concert in history?",
+    answerArray: ["1 million", "2 million", "3 million", "4 million", "5 million", "6 million", "10 million"],
+    correctAnswerIndex: 3
+  },
+  { category: 'arts',
+    question: "What is the average length of a song in minutes?",
+    answerArray: ["1", "2", "4", "6", "8", "10", "12"],
+    correctAnswerIndex: 2
+  },
+  { category: 'arts',
+    question: "How much did the best-selling album of all time make (in millions of copies)?",
+    answerArray: ["10", "20", "50", "70", "100", "300", "400"],
+    correctAnswerIndex: 3
+  },
+  { category: 'arts',
+    question: "What is the estimated value of the global music industry in 2023?",
+    answerArray: ["$30 billion", "$100 billion", "$150 billion", "$200 billion", "$250 billion", "$300 billion", "$350 billion"],
+    correctAnswerIndex: 0
+  },
+
+
+
+
+  
 
 ];   
 
