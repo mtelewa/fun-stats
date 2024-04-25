@@ -168,7 +168,7 @@ const questionsDB = [
 // generate a random number array based on the shuffle function
 for (var numArray=[], i=0 ; i<20 ; ++i) numArray[i]=i;      // 20 entries in each category
 let randomNumArray = shuffle(numArray);
-var numArray = 0;
+var entryIndex = 0;
 
 
 /* wait for the DOM to finish loading before running the quiz
