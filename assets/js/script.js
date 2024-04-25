@@ -273,3 +273,23 @@ function handleEnterKey(event) {
 function handleSubmitButton() {
     checkAnswer(entryIndex);
 }
+
+
+/**
+ * handle the submit form
+ *  
+ */
+function handleFormSubmit(event) { 
+  /* This intercepts submission of a form. Without it, the page will reload
+   as the data is submitted to a server via an HTTP GET or POST request,
+   This function stops the default action of an element */
+  event.preventDefault();
+  console.log('sdasds')  
+  // loginForm.submit();	// submit the form through JS
+  window.open("thanks.html", "_self");
+}
+
+let loginForm = document.getElementById('contact-form');
+if (loginForm != null) {
+  loginForm.addEventListener('submit', handleFormSubmit);
+}

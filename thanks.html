@@ -25,26 +25,12 @@
     <!-- Main -->
     <main>
         <section>
-            <div id="contact">
-                <form id="contact-form" method="POST" action="contact.html">
-                    <fieldset class="box-border-shadow ">
-                        <legend><h3>Your details</h3></legend>
-                        <label for="name" class="contact-text">Full Name</label><br>
-                        <input type="text" name="name" id="name" class="text-input" pattern=".*\S+.*" required>
-                        <br>
-                        <label for="email" class="contact-text">Email Address</label><br>
-                        <input type="email" name="email_address" id="email" class="text-input" pattern=".*\S+.*" required>
-                    </fieldset>
-
-                    <fieldset class="box-border-shadow">
-                        <legend><h3>Write us a message</h3></legend>
-                        <div>
-                            <textarea name="review" rows="4" class="text-input black-text" placeholder="Write Something here"></textarea>
-                        </div>
-                    </fieldset>
-
-                    <button type="submit" aria-label="button to submit sign-up form" id="send-button"><h3> Send </h3></button>
-            </form>               
+            <div id="contact-form">
+                <div id="thanks" class="box-border-shadow">
+                    <h2> Thank you!</h2>
+                    <h2> We will get back to you! </h2>
+                </div>
+                <button type="button" name="home" class="box-border-shadow push-down" id="home-button" onclick="location.href='index.html'"> <h3> Back to Home </h3> </button>
             </div>
         </section>
     </main>
