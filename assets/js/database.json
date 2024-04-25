@@ -117,7 +117,7 @@
   { "category": "arts",
     "question": "How many paintings did Vincent van Gogh sell during his lifetime?",
     "answerArray": ["1", "5", "10", "20", "50", "100", "200"],
-    "correctAnswerIndex": "0"
+    "correctAnswerIndex": 0
   },
   { "category": "arts",
     "question": "What percentage of the world's art is estimated to be forged?",
@@ -147,7 +147,7 @@
   { "category": "arts",
     "question": "How many art galleries and museums are there in Paris, France?",
     "answerArray": ["100", "200", "300", "400", "500", "600", "750"],
-    "correctAnswerIndex": "0"
+    "correctAnswerIndex": 0
   },
   { "category": "arts",
     "question": "What is the estimated value of the global art market?",
@@ -157,7 +157,7 @@
   { "category": "arts",
     "question": "What is the highest-grossing movie of all time worldwide (in billions of dollars)?",
     "answerArray": ["2", "3", "4", "5", "6", "7", "10"],
-    "correctAnswerIndex": "0"
+    "correctAnswerIndex": 0
   },
   { "category": "arts",
     "question": "What is the length of the longest Hollywood movie (in minutes)?",
@@ -207,7 +207,7 @@
   { "category": "arts",
     "question": "What is the estimated value of the global music industry in 2023?",
     "answerArray": ["$30 billion", "$100 billion", "$150 billion", "$200 billion", "$250 billion", "$300 billion", "$350 billion"],
-    "correctAnswerIndex": "0"
+    "correctAnswerIndex": 0
   },
   { "category": "history",
     "question": "What year did World War I begin?",
@@ -217,7 +217,7 @@
   { "category": "history",
     "question": "How long did Julius Caesar rule as dictator of Rome?",
     "answerArray": ["1", "5", "10", "15", "20", "25", "30"],
-    "correctAnswerIndex": "0"
+    "correctAnswerIndex": 0
   },
   { "category": "history",
     "question": "What year did the Berlin Wall fall?",
@@ -298,7 +298,7 @@
   { "category": "history",
     "question": "What was the approximate population of ancient Egypt at its peak?",
     "answerArray": ["2 million", "10 million", "15 million", "50 million", "100 million", "150 million", "200 million"],
-    "correctAnswerIndex": "0"
+    "correctAnswerIndex": 0
   },
   { "category": "history",
     "question": "How many years did the ancient Egyptian civilization last?",
