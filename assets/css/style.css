@@ -253,6 +253,25 @@ button {
 }
 
 
+/* About -----------------------------------------*/
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    margin: auto;
+    padding: 50px;
+}
+
+#about-paragraph {
+    padding: 20px;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
 
 /* Footer -----------------------------------------*/
 
@@ -276,7 +295,8 @@ button {
 /* all footer items are white */
 #footer-items * {
     color: #e8e9f0;
-    list-style-type: none;    
+    list-style-type: none;
+    text-decoration: none;    
 }
 
 
@@ -401,6 +421,10 @@ button {
     /* footer container */
     #footer-box{
         width: 50%;
+    }
+
+    #about {
+        width: 50vw;
     }
 
 }
