@@ -88,16 +88,16 @@ h2, h3 {
 
 /* images in the category boxes */
 #arts {
-    background: url("../images/7638588.jpg") no-repeat center center/cover;
+    background: url("../images/7638588-compressed.webp") no-repeat center center/cover;
 }
 #science {
-    background: url("../images/dna-closely-compressed.jpg") no-repeat center center/cover;
+    background: url("../images/dna-closely-compressed.webp") no-repeat center center/cover;
 }
 #sports{
-    background: url("../images/david-clarke-DRtKiuN9_Mk-unsplash-compressed.jpg") no-repeat center center/cover;
+    background: url("../images/david-clarke-DRtKiuN9_Mk-unsplash-compressed.webp") no-repeat center center/cover;
 }
 #history {
-    background: url("../images/books-library-compressed.jpg") no-repeat center center/cover;
+    background: url("../images/books-library-compressed.webp") no-repeat center center/cover;
 }
 
 
