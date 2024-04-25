@@ -211,10 +211,107 @@ const questionsDB = [
     answerArray: ["$30 billion", "$100 billion", "$150 billion", "$200 billion", "$250 billion", "$300 billion", "$350 billion"],
     correctAnswerIndex: 0
   },
+  { category: 'history',
+    question: "What year did World War I begin?",
+    answerArray: ["1900", "1910", "1914", "1918", "1921", "1925", "1931"],
+    correctAnswerIndex: 2
+  },
+  { category: 'history',
+    question: "How long did Julius Caesar rule as dictator of Rome?",
+    answerArray: ["1", "5", "10", "15", "20", "25", "30"],
+    correctAnswerIndex: 0
+  },
+  { category: 'history',
+    question: "What year did the Berlin Wall fall?",
+    answerArray: ["1980", "1985", "1989", "1991", "1995", "2000", "2002"],
+    correctAnswerIndex: 2
+  },
+  { category: 'history',
+    question: "How many years did the Cold War last?",
+    answerArray: ["30", "35", "40", "45", "50", "55", "65"],
+    correctAnswerIndex: 3
+  },
+  { category: 'history',
+    question: "What year did the American Civil War end?",
+    answerArray: ["1850", "1860", "1865", "1870", "1875", "1880", "1885"],
+    correctAnswerIndex: 2
+  },
+  { category: 'history',
+    question: "How many years did the reign of Queen Victoria last?",
+    answerArray: ["21", "32", "44", "51", "63", "70", "74"],
+    correctAnswerIndex: 4
+  },
+  { category: 'history',
+    question: "How many years did the Renaissance last?",
+    answerArray: ["100", "150", "200", "250", "300", "350", "400"],
+    correctAnswerIndex: 2
+  },
+  { category: 'history',
+    question: "What year did the French Revolution begin?",
+    answerArray: ["1750", "1774", "1789", "1802", "1812", "1823", "1839"],
+    correctAnswerIndex: 2
+  },
+  { category: 'history',
+    question: "How many years did the Great Depression last?",
+    answerArray: ["6", "10", "12", "16", "21", "32", "41"],
+    correctAnswerIndex: 2
+  },
+  { category: 'history',
+    question: "What year did World War II end?",
+    answerArray: ["1940", "1945", "1950", "1955", "1960", "1965", "1975"],
+    correctAnswerIndex: 1
+  },
+  { category: 'history',
+    question: "How many years did the Roman Empire last?",
+    answerArray: ["200", "300", "400", "500", "600", "700", "800"],
+    correctAnswerIndex: 3
+  },
+  { category: 'history',
+    question: "In what year did the Industrial Revolution begin?",
+    answerArray: ["1700", "1750", "1800", "1850", "1870", "1910", "1920"],
+    correctAnswerIndex: 1
+  },
+  { category: 'history',
+    question: "What year did the Black Death begin?",
+    answerArray: ["1215", "1245", "1345", "1360", "1440", "1460", "1520"],
+    correctAnswerIndex: 2
+  },
+  { category: 'history',
+    question: "How many years did the Spanish Inquisition last?",
+    answerArray: ["25", "45", "65", "85", "105", "200", "250"],
+    correctAnswerIndex: 3
+  },
+  { category: 'history',
+    question: "How many years did the Ottoman Empire last?",
+    answerArray: ["100", "200", "300", "400", "500", "600", "700"],
+    correctAnswerIndex: 5
+  },
 
-
-
-
+  { category: 'history',
+    question: "In what year was the Great Pyramid of Giza completed?",
+    answerArray: ["3550 BCE", "2550 BCE", "2400 BCE", "2100 BCE", "2000 BCE", "1800 BCE", "1650 BCE"],
+    correctAnswerIndex: 1
+  },
+  { category: 'history',
+    question: "How many years did the reign of Cleopatra VII last?",
+    answerArray: ["5", "10", "15", "20", "25", "30", "35"],
+    correctAnswerIndex: 3
+  },
+  { category: 'history',
+    question: "What was the approximate population of ancient Egypt at its peak?",
+    answerArray: ["2 million", "10 million", "15 million", "50 million", "100 million", "150 million", "200 million"],
+    correctAnswerIndex: 0
+  },
+  { category: 'history',
+    question: "How many years did the ancient Egyptian civilization last?",
+    answerArray: ["400", "600", "1,000", "2,000", "3,000", "4,000", "6,000"],
+    correctAnswerIndex: 4
+  },
+  { category: 'history',
+    question: "How many dynasties ruled ancient Egypt?",
+    answerArray: ["20", "30", "50", "100", "120", "150", "200"],
+    correctAnswerIndex: 1
+  },
   
 
 ];   
