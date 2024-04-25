@@ -18,23 +18,61 @@
 <body>
     <!-- Header -->
     <header>
-        <h1 class="center-text">Sports <i class="fa-regular fa-futbol"></i> </h1>      
+        <h1 class="center-text" id="category-header">Sports <i class="fa-regular fa-futbol"></i> </h1>      
     </header>
 
 
     <!-- Main -->
     <main>
         <section>
-            <div id="quiz">
+            <div id="quiz-container"> 
+                <div id="quiz" class="box-border-shadow">
+                    <div id="question" class="center-text"></div>
+                    
+                    <div id="answer">
+                        <!-- range min -->
+                        <label for="slider" id="min-value"></label>
+                        <!-- slider-->
+                        <input type="range" min="0" max="6" value="3" step="1" id="slider">
+                        <!-- range max -->
+                        <label for="slider" id ="max-value"></label>
+                        <!-- current slider value -->
+                        <p class="center-text" id="chosen-value"></p>
+                        <!-- submit answer button -->
+                        <button type="submit" name="submit" class="box-border-shadow" id="submit-button"> <h3> Submit </h3>  </button>
+                        <!-- The Modal (shows in case of wrong answer) -->
+                        <div id="myModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <!-- close button -->
+                                <span class="close">&times;</span>
 
+                                <!-- display final score -->
+                                <p id="game-end-message"></p>
+                                <p id="final-score"> Your Score is 0</p>
+
+                                <!-- change category and try again buttons -->
+                                <div id="modal-buttons"> 
+                                    <button type="button" name="submit" class="box-border-shadow modal-button" onclick="location.href='index.html'"> <p>Change Category</p> </button>
+                                    <button type="reset" name="submit" class="box-border-shadow modal-button" id="try-again-button" onClick="window.location.reload();"> <p>Try again</p> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="score" class="box-border-shadow">
+                        <span> Your score: </span>
+                        <span id="score-value"> 0 </span>
+                    </div>
+                </div>
             </div>
-
         </section>
 
-
+        <!-- game rules -->
         <section>
-            <div id="game-rules">  
-                <label for="game-rules-check-box"> <h3>Game Rules</h3> </label>
+            <button type="button" name="home" class="box-border-shadow" id="home-button" onclick="location.href='index.html'"> <h3> Change Category </h3> </button>
+            <div id="game-rules">                  
+                <label for="game-rules-check-box"> <h3 id="game-rules-heading">Game Rules</h3> </label>
                 <input type="checkbox" id="game-rules-check-box">
                 <div id="game-rules-box" class="box-border-shadow">
                     <ul>
@@ -43,26 +81,18 @@
                     <p>
                         You are to choose a category and answer the questions presented.
                         The questions are based on statistics or numbers related to a certian event or phenomenon.
+                        The answers in some questions (especially in science) can be approximate as the aim is to grasp the scale of the event/phenomenon in question.
                         Move the slider across the range given to select the answer.
-                        The answer does not have to be exact but it has to be within 20% to the true correct answer.
+                        The answer does not have to be exact but it can also be the nearest value (+ or -) to the correct answer. <br> <br>
                     </p>
-                    <ul>
-                        <li> Difficulty setting </li>
-                    </ul> 
-                    <p>
-                        After getting 10 correct answers, the difficulty level goes up, so now your answer has to be within the range of 10% of the correct answer.
-                        After another 10 correct answers, you have to guess the exact correct answer.
-                    </p>
-
                     <ul>
                         <li> Scoring </li>
                     </ul> 
                     <p>
                         Think of a dartboard, the closer to the center the higher the score! <br>
-                        For each correct answer 20% far from the true answer, you get 1 point (a free throw in basketball!).
-                        Within 10% of the true answer, you get 2 points. 
-                        As your answer becomes exact, you get 3 points (a three pointer!!).
-                        If you choose a wrong answer, the game ends!
+                        For each correct answer that is nearest neighbor to the correct answer, you get 1 point (a free throw in basketball!).
+                        As your answer becomes exact, you get 3 points (a three pointer!).
+                        If you choose a wrong answer, the game ends! <br>
                     </p>
                 </div>
             </div>
