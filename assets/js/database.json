@@ -42,7 +42,7 @@
   { "category": "science",
     "question": "There is a huge number of atoms in a single grain of sand, how many zeros in that number?",
     "answerArray": ["4", "8", "12", "16", "20", "24", "28"],
-    "correctAnswerIndex": 6
+    "correctAnswerIndex": 4
   },
   { "category": "science",
     "question": "What percentage of the human body is made up of water?",
@@ -361,7 +361,7 @@
     "correctAnswerIndex": 4
   },
   { "category": "sports",
-    "question": "How many hurdles are there in a 110m hurdles race?",
+    "question": "How many hurdles are there in a 110 m hurdles race?",
     "answerArray": ["5", "6", "7", "8", "9", "10", "11"],
     "correctAnswerIndex": 2
   },
