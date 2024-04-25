@@ -1,10 +1,6 @@
-// make sure the JSON file is on a local or remote server
-fetch('https://server.com//database.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
 
 // import questions database from json file
-import questionsDB from './database.json' with { type: 'json' }  
+import questionsDB from './database.json' with { type: 'json' };
 
 // generate a random number array based on the shuffle function
 for (var numArray=[], i=0 ; i<20 ; ++i) numArray[i]=i;      // 20 entries in each category
