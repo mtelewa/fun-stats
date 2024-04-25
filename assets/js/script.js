@@ -2,8 +2,8 @@
 // Questions database (ideally this would be imported)
 const questionsDB = [
   { category: 'science',
-    question: "How many cells are there in the human body? (in millions)",
-    answerArray: [10, 50, 100, 1000, 10000, 40000, 100000],
+    question: "How many cells are there in the human body?",
+    answerArray: ["1 million", "30 million",  "50 million", "100 million", "1 trillion", "30 trillion", "50 trillion"],
     correctAnswerIndex: 5
   },
   { category: 'science',
@@ -13,51 +13,162 @@ const questionsDB = [
   },
   { category: 'science',
     question: "How many Earths could fit inside the sun?",
-    answerArray: [100, 1000, "1 million", "1 billion", "1 trillion", "1 quadrillion", "1 quintillion"],
+    answerArray: ["100", "1000", "1 million", "1 billion", "1 trillion", "1 quadrillion", "1 quintillion"],
     correctAnswerIndex: 3
   },
   { category: 'science',
     question: "What percentage of the Earth's surface is covered by water?",
-    answerArray: ["10%", "25%", "50%", "75%", "90%", "95%", "99%"],
+    answerArray: ["10%", "25%", "50%", "60%", "70%", "85%", "90%"],
     correctAnswerIndex: 4
   },
   { category: 'science',
-    question: "How many known species of insects are there on Earth?",
+    question: "How many species of insects are there on Earth?",
     answerArray: ["10,000", "100,000", "1 million", "10 million", "100 million", "1 billion", "10 billion"],
-    correctAnswerIndex: 6
+    correctAnswerIndex: 3
   },
   { category: 'science',
     question: "What is the estimated age of the universe in years?",
-    answerArray: ["10 million", "100 million", "1 billion", "10 billion", "100 billion", "1 trillion", "13.8 trillion"],
-    correctAnswerIndex: 6
-  },
-  { category: 'science',
-    question: "How many neurons are there in the human brain?",
-    answerArray: ["100 thousand", "1 million", "10 million", "100 million", "1 billion", "10 billion", "100 billion"],
-    correctAnswerIndex: 6
-  },
-  { category: 'science',
-    question: "What percentage of the universe is composed of dark matter?",
-    answerArray: ["5%", "10%", "25%", "50%", "75%", "90%", "95%"],
-    correctAnswerIndex: 5
-  },
-  { category: 'science',
-    question: "How many atoms are there in a single grain of sand?",
     answerArray: ["10 million", "100 million", "1 billion", "10 billion", "100 billion", "1 trillion", "10 trillion"],
     correctAnswerIndex: 6
   },
   { category: 'science',
+    question: "How many neurons are there in the human brain?",
+    answerArray: ["1 million", "10 million", "100 million", "1 billion", "10 billion", "100 billion", "1 trillion"],
+    correctAnswerIndex: 5
+  },
+  { category: 'science',
+    question: "What percentage of the universe is composed of dark matter?",
+    answerArray: ["25%", "35%", "45%", "65%", "75%", "85%", "95%"],
+    correctAnswerIndex: 5
+  },
+  { category: 'science',
+    question: "There is a huge number of atoms in a single grain of sand, how many zeros in that number?",
+    answerArray: ["4", "8", "12", "16", "20", "24", "28"],
+    correctAnswerIndex: 6
+  },
+  { category: 'science',
     question: "What percentage of the human body is made up of water?",
-    answerArray: ["50%", "60%", "70%", "80%", "90%", "95%", "99%"],
+    answerArray: ["30%", "40%", "50%", "60%", "70%", "80%", "90%"],
+    correctAnswerIndex: 3
+  },
+  {
+    category: 'science',
+    question: "What is the approximate speed of light in a vacuum? (in meters per second)",
+    answerArray: ["300,000", "1 million", "3 million", "10 million", "30 million", "300 million", "1 trillion"],
+    correctAnswerIndex: 5
+  },
+  {
+    category: 'science',
+    question: "What percentage of the universe is made up of hydrogen?",
+    answerArray: ["10%", "25%", "50%", "75%", "85%", "90%", "95%"],
+    correctAnswerIndex: 3
+  },
+  {
+    category: 'science',
+    question: "How many bones are there in the adult human body?",
+    answerArray: [20, 50, 80, 150, 200, 300, 350],
+    correctAnswerIndex: 4
+  },
+  {
+    category: 'science',
+    question: "What is the boiling point of water in Celsius?",
+    answerArray: ["50", "100", "150", "200", "250", "300", "350"],
+    correctAnswerIndex: 1
+  },
+  {
+    category: 'science',
+    question: "How many planets are there in our solar system?",
+    answerArray: [6, 8, 9, 10, 12, 15, 20],
+    correctAnswerIndex: 1
+  },
+  {
+    category: 'science',
+    question: "What percentage of the Earth's atmosphere is made up of oxygen?",
+    answerArray: ["20%", "30%", "40%", "50%", "60%", "70%", "80%"],
+    correctAnswerIndex: 0
+  },
+  {
+    category: 'science',
+    question: "How many moons does Jupiter have?",
+    answerArray: [1, 10, 50, 100, 200, 500, 1000],
+    correctAnswerIndex: 3
+  },
+  {
+    category: 'science',
+    question: "What is the approximate diameter of the Earth in kilometers?",
+    answerArray: ["1,000", "4,000", "6,000", "12,000", "16,000", "20,000", "40,000"],
+    correctAnswerIndex: 3
+  },
+  {
+    category: 'science',
+    question: "What is the pH of pure water at room temperature?",
+    answerArray: ["0", "3", "5", "7", "9", "11", "14"],
+    correctAnswerIndex: 3
+  },
+  {
+    category: 'science',
+    question: "How many chromosomes are there in a human somatic cell?",
+    answerArray: [23, 46, 69, 92, 115, 138, 214],
+    correctAnswerIndex: 1
+  },
+  { category: 'arts',
+    question: "What was the cost of the most expensive painting ever sold at auction?",
+    answerArray: ["$350 million", "$450 million", "$500 million", "$600 million", "$750 million", "$800 million", "$1 billion"],
+    correctAnswerIndex: 1
+  },
+  { category: 'arts',
+    question: "How many paintings did Vincent van Gogh sell during his lifetime?",
+    answerArray: ["1", "5", "10", "20", "50", "100", "200"],
+    correctAnswerIndex: 0
+  },
+  { category: 'arts',
+    question: "What percentage of the world's art is estimated to be forged?",
+    answerArray: ["5%", "10%", "20%", "30%", "40%", "50%", "60%"],
+    correctAnswerIndex: 4
+  },
+  { category: 'arts',
+    question: "How many art pieces are estimated to be stored in the Louvre Museum?",
+    answerArray: ["10,000", "50,000", "100,000", "200,000", "400,000", "500,000", "1 million"],
+    correctAnswerIndex: 5
+  },
+  { category: 'arts',
+    question: "What percentage of public art in the United States is by women artists?",
+    answerArray: ["5%", "10%", "15%", "20%", "25%", "30%", "40%"],
+    correctAnswerIndex: 1
+  },
+  { category: 'arts',
+    question: "What percentage of art sales are estimated to occur online?",
+    answerArray: ["5%", "10%", "20%", "30%", "40%", "50%", "60%"],
     correctAnswerIndex: 2
+  },
+  { category: 'arts',
+    question: "How many museums are there in the UK?",
+    answerArray: ["500", "800", "1,000", "1,400", "1,800", "3,000", "4,000"],
+    correctAnswerIndex: 4
+  },
+  { category: 'arts',
+    question: "How many art galleries and museums are there in Paris, France?",
+    answerArray: ["100", "200", "300", "400", "500", "600", "750"],
+    correctAnswerIndex: 0
+  },
+  { category: 'arts',
+    question: "What is the estimated value of the global art market?",
+    answerArray: ["$1 billion", "$10 billion", "$20 billion", "$40 billion", "$60 billion", "$100 billion", "$1 trillion"],
+    correctAnswerIndex: 4
+  },
+  { category: 'arts',
+    question: "What is the highest-grossing movie of all time worldwide (in billions of dollars)?",
+    answerArray: ["2", "3", "4", "5", "6", "7", "10"],
+    correctAnswerIndex: 0
   }
+
 ];   
 
 
 // generate a random number array based on the shuffle function
-for (var numArray=[], i=0 ; i<4 ; ++i) numArray[i]=i;
+for (var numArray=[], i=0 ; i<20 ; ++i) numArray[i]=i;      // 20 entries in each category
 let randomNumArray = shuffle(numArray);
-var entryIndex = 0;
+var numArray = 0;
 
 
 /* wait for the DOM to finish loading before running the quiz

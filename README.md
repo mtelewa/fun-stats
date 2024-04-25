@@ -107,7 +107,7 @@ The main features of the website are
 
 * Future Implementations that shall allow returning and frequent users to visit more often
 
-    * 
+    *  After getting 10 correct answers, the difficulty level goes up, so now your answer has to be the exact correct answer. 
 
 - - -
 
