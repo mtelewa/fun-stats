@@ -343,14 +343,15 @@ The following test cases were performed on each page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-
-
+| Website title | link directs the user back to the home page | click title | home page reloads | Pass |
 
 
 
 ### Known Bugs
 
 * The website depends on *Font Awesome* package. If *Font Awesome* is down, the icons do not load and so the footer would not look as intended. The icons next to quiz page headers also will not load. This was encountered once when *Font Awesome* was having major issues.
+
+* In small displays, the range values sometimes are squeezed by the slider when the value has large string length. A compromisation has to be done by reducing the slider length to fit the minimum and maximum values. However, this will reduce the slider area, thus affecting the user interface on mobile devices.
 
 
 - - -
