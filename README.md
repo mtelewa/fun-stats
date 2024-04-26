@@ -263,10 +263,10 @@ The main features of the website are
 
 As seen, there are no errors and only warnings of no heading was obtained. This does not affect the functionality of the website by any means.
 
-* [CSS Validator](https://jigsaw.w3.org/css-validator/) result for the `.css` file showed no errors, however it showed 3 warnings related to the importing of google fonts - which do not affect the deployment of the website by any means
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) result for the `.css` file showed no errors, however it showed 9 warnings related to the importing of google fonts and using vendor extensions. These warnings do not affect the deployment of the website by any means
 
 <p align="center">
-<img src="documentation/testing/css-validation.png" alt="css validation" width="90%">
+<img src="documentation/testing/css-validation.png" alt="css validation" width="70%">
 </p>
 
 <p align="center">
@@ -278,7 +278,7 @@ As seen, there are no errors and only warnings of no heading was obtained. This 
 </p>
 
 <p align="center">
-<img src="documentation/testing/css-warnings.png" alt="css validation" width="90%">
+<img src="documentation/testing/css-warnings.png" alt="css validation" width="70%">
 </p>
 
 
