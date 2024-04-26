@@ -303,8 +303,37 @@ As seen, there are no errors and only warnings of no heading was obtained. This 
 
 ### Accessibility and performance
 
+These tests were carried out using Lighthouse
 
 
+`index.html`
+
+<p align="center">
+<img src="documentation/testing/lighthouse-home.png" alt="lighthouse-home" width="40%">
+</p>
+
+
+Quiz pages
+
+<p align="center">
+<img src="documentation/testing/lighthouse-quiz.png" alt="lighthouse-quiz" width="40%">
+</p>
+
+
+`contact.html`
+
+<p align="center">
+<img src="documentation/testing/lighthouse-contact.png" alt="lighthouse-contact" width="40%">
+</p>
+
+`about.html`
+
+<p align="center">
+<img src="documentation/testing/lighthouse-about.png" alt="lighthouse-about" width="40%">
+</p>
+
+
+The website scores very high on accessibility, best practices and search engine optimization. Performance can still be improved.
 
 ### Test Cases and Results
 
@@ -321,7 +350,7 @@ The following test cases were performed on each page
 
 ### Known Bugs
 
-* 
+* The website depends on *Font Awesome* package. If *Font Awesome* is down, the icons do not load and so the footer would not look as intended. The icons next to quiz page headers also will not load. This was encountered once when *Font Awesome* was having major issues.
 
 
 - - -
