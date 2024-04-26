@@ -368,7 +368,8 @@ The following test cases were performed on each page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Internal navigation | User is the home page | mouse click | gets directed to the home page | Pass |
-
+| Reject numbers in the name field | alert appears if numbers are entered in the name field | write numbers in name field | alert pops up | Pass |
+| Submit form validation | user gets directed to thanks page | submit the form by clicking send button | directs to thanks page | Pass |
 
 
 ### Known Bugs
