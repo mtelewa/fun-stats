@@ -339,7 +339,7 @@ The website scores very high on accessibility, best practices and search engine 
 
 The following test cases were performed on each page
 
-* `index.html`
+* Home page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -350,10 +350,15 @@ The following test cases were performed on each page
 
 * Quiz pages
 
-
-
-
-
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Focus on slider on page load | the focus is on the slider to allow keyboard use to move slider | load or reload page | pressing up/down or left/right moves the slider | Pass |
+| Submitting through Enter key | pressing enter shall allow the user to submit without using the mouse | Enter key press | answer is submitted | Pass |
+| Submitting through button | user can submit through mouse click on submit button | mouse click | answer is submitted | Pass |
+| Getting correct but not exact answers | if user gets correct but not exact answer, they get 1 point | submit +1 or -1 from the correct answer | score tally increases by 1 | Pass |
+| Getting correct and exact answers | if user gets correct and exact answer, they get 3 points | submit the correct answer | score tally increases by 3 | Pass |
+| Message on wrong answer | if user gets wrong answer, the quiz ends with game over message | submit the wrong answer | modal window appears with game over message | Pass |
+| Message on finishing the quiz | if user gets correct or semi-correct answers, they get congrats message | finish the quiz successfully | modal window appears with congrats message | Pass |
 
 
 * About page
