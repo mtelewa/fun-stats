@@ -2,9 +2,9 @@
 
 [View the deployed project here](https://mtelewa.github.io/fun-stats)
 
+Fun Stats is a quiz website offering 4 different categories: History, Science, Arts and Sports. The quiz is unconventional in the sense that the answers to all questions lies in the figures or statistics behind a certain event or phenomenon. The aim is to let the user grasp how huge/small or old/recent an event or a phenomenon really is.
 
-
-<!-- ![Mockup](documentation/features/mockup.png) -->
+![Mockup](documentation/features/mockup.png)
 
 ## Contents
 * [User Experience (UX)](#user-experience-ux) 
@@ -41,17 +41,22 @@
 
 #### First Time Visitor Goals
 
-* I want to get informed about some interesting and shocking facts
+* I want to get informed about some interesting facts
 * I want to increase my knowledge in different topics
+* I want the game rules to be easily accessible
+* I want to easily navigate from category to another
 
 
 #### Returning Visitor Goals
 
-* I want to know more facts and check out different topics
+* I want to know more facts 
+* I want to check out other categories
+* I want to improve my score
 
 #### Frequent Visitor Goals
 
-* I want to improve my score and solve as many questions with the exact correct answer
+* I want to get a perfect score and solve as many questions with the exact correct answer
+* I want to check out other categories
 
 - - -
 
@@ -59,12 +64,12 @@
 
 ### Color Scheme
 
-The colors chosen were based on pantone colot palette like [this](https://icolorpalette.com/color/pantone-10239-c). This was inspired by the "Extraterrestrial" color palette in the book "Color Harmony" by Leatrice Eiseman. The colors are to represent a deep dive into each category, also an increasing level of difficulty as the user progresses.
+The colors chosen were based on pantone color palette like as in [here](https://icolorpalette.com/color/pantone-10239-c). This was inspired by the "Extraterrestrial" color palette in the book "Color Harmony" by Leatrice Eiseman. The colors are to represent a deep dive into each category, also a calm setting to allow user to focus on the questions.
 <br>
 <br>
 
 <p align="center">
-    <img src="documentation/design/color-palette.png" alt="Color Palette" height="50%">
+    <img src="documentation/design/color-palette.png" alt="Color Palette" height="400px">
 </p>
 
 
@@ -72,23 +77,38 @@ The colors chosen were based on pantone colot palette like [this](https://icolor
 
 Google Fonts was used to import the chosen fonts. The three main fonts used across the website are
 
-* [Segwick Ave](https://fonts.google.com/specimen/Sedgwick+Ave)
-* [Platypi](https://fonts.google.com/specimen/Platypi)
-* The `Indie Flower` font was inspired by [this page on Medium](https://bootcamp.uxdesign.cc/10-best-script-and-handwritten-google-fonts-afc4b77fdb0c)
+* [Segwick Ave](https://fonts.google.com/specimen/Sedgwick+Ave) for the page header or title
+* [Platypi](https://fonts.google.com/specimen/Platypi) for the answers as well as the game rules text
+* The `Indie Flower` font was inspired by [this page on Medium](https://bootcamp.uxdesign.cc/10-best-script-and-handwritten-google-fonts-afc4b77fdb0c). It was used mainly for the questions.
 
 These fonts were chosen to convey the playful nature of the website since it is a quiz. Also, I wanted to deliver this hand-written feeling to attract users from different ages.
 
 ### Imagery
 
-* The icons chosen next to the topic header are to reflect the topic nature
+* The images chosen next as a cover to each category as well as the icons in the header are to reflect the category's nature.
 
 ### Wireframes
 
+* Wireframes were created using [balsamiq](https://balsamiq.com/). The following images serve as a preliminary design for the website interface and intended functionality.
+
+<p align="center">
+<img src="documentation/design/index.png" alt="home" width="45%">
+<img src="documentation/design/science.png" alt="science-quiz" width="45%">
+</p>
+
+<p align="center">
+<img src="documentation/design/science_almost_correct.png" alt="home" width="45%">
+<img src="documentation/design/science_bullseye.png" alt="science-quiz" width="45%">
+</p>
 
 
 ### Accessibility
 
 The website is as accessible as possible. Specifically by following these good-practice guidelines
+
+* Accessible Rich Internet Applications (Aria) labels on interactive elements, links and icons
+* Semantic HTML
+* Using a hover state on all buttons on the website
 
 
 
@@ -135,6 +155,8 @@ The main features of the website are
 
 * [Ilovemage](https://www.iloveimg.com/) to compress and resize images
 
+* [Cloud Convert](https://cloudconvert.com/jpg-to-webp) to convert jpg to webp images
+
 * [Techsini](https://techsini.com/multi-mockup/) to show the website image on a range of devices
 
 * [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) to check the performance, quality, and correctness of the webpage
@@ -142,6 +164,8 @@ The main features of the website are
 * [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to simulate other accessibility needs
 
 * [Color Picker](https://imagecolorpicker.com/en)
+
+* [balsamiq](https://balsamiq.com/)
 
 
 - - -
