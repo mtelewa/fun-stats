@@ -284,7 +284,7 @@ As seen, there are no errors and only warnings of no heading was obtained. This 
 * [JavaScript Validator](https://jshint.com/) result for the `.js` file showed no errors, however it showed 8 warnings, all on one line where the database is imported. These warnings do not affect the logic handling, datastructure or flow control of the script.
 
 <p align="center">
-<img src="documentation/testing/js-validator.png" alt="js-validation" width="50%">
+<img src="documentation/testing/js-validator.png" alt="js-validation" width="40%">
 </p>
 
 * [JSON Validator](https://jsonlint.com/) showed that the JSON file is valid
@@ -344,7 +344,8 @@ The following test cases were performed on each page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Category hover with zoom | image and text are zoomed and box gets highlighted | mouse hover | image and text are zoomed and box shadow color changes | Pass |
-
+| Toggle box for the game rules | Box opens with game rules | mouse click | Game rules are displayed | Pass |
+| Toggle box for the game rules | Box opens with game rules | mouse click | Game rules are displayed | Pass |
 
 
 ### Known Bugs
