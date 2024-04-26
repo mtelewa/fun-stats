@@ -58,7 +58,8 @@ h2, h3 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 /* category box also a flex container containing `category-image` and `category-label` boxes*/
@@ -503,6 +504,11 @@ textarea {
 /* Media query: for tablets and larger (1024px and up) */
 
 @media screen and (min-width:1024px) {
+
+    #categories {
+        width: 100%;
+    }
+
     #game-rules-box {
         width: 100vh;
     }
@@ -517,4 +523,5 @@ textarea {
     }
 
 }
+
 
