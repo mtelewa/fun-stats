@@ -344,8 +344,9 @@ The following test cases were performed on each page
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Category hover with zoom | image and text are zoomed and box gets highlighted | mouse hover | image and text are zoomed and box shadow color changes | Pass |
-| Toggle box for the game rules | Box opens with game rules | mouse click | Game rules are displayed | Pass |
-| Toggle box for the game rules | Box opens with game rules | mouse click | Game rules are displayed | Pass |
+| Toggle box for the game rules | Box opens with game rules when clicked | mouse click | game rules are displayed | Pass |
+| Internal navigation | User is directed to About, Contact and category pages | mouse click | gets directed to the respective page | Pass |
+| External navigation | User is directed to social media pages | mouse click | gets directed to the respective page in a new tab | Pass |
 
 
 ### Known Bugs
