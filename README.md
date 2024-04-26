@@ -114,8 +114,8 @@ The website is as accessible as possible. Specifically by following these good-p
 I used the chrome extension [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to check for **total** as well as **Yellow-blue color blindness (Tritanopia)** color blindness. The latter was checked as blue is the prevailing color throughout the website. The reults are shown here, respectively.
 
 <p align="center">
-<img src="documentation/design/total-color-blindness.png" alt="total blindness" width="70%">
-<img src="documentation/design/tritanopia.png" alt="tritanopia" width="70%">
+<img src="documentation/design/total-color-blindness.png" alt="total blindness" width="50%">
+<img src="documentation/design/tritanopia.png" alt="tritanopia" width="50%">
 </p>
 
 As can be seen, there is still enough contrast between the text and the background.
@@ -135,20 +135,20 @@ The main features of the website are
 * A **favicon** in the browser tab.
 
 <p align="center">
-<img src="documentation/features/favicon.png" alt="favicon" width="30%">
+<img src="documentation/features/favicon.png" alt="favicon" width="20%">
 </p>
 
 * Easily accessible icons to choose a category through text or image. Also the icons have zoom and hover effect to highlight what category the user is about to select.
 
 <p align="center">
-<img src="documentation/features/hover-icons.png" alt="hover-zoom-effect" width="70%">
+<img src="documentation/features/hover-icons.png" alt="hover-zoom-effect" width="50%">
 </p>
 
 *  **Toggle dialog box** to present additional information regarding game rules **without filling the page with text**.
 
 <p align="center">
-<img src="documentation/features/toggle-box-closed.png" alt="togle-box-closed" width="70%"> <br><br>
-<img src="documentation/features/toggle-box-open.png" alt="togle-box-closed" width="70%">
+<img src="documentation/features/toggle-box-closed.png" alt="togle-box-closed" width="50%"> <br><br>
+<img src="documentation/features/toggle-box-open.png" alt="togle-box-closed" width="50%">
 </p>
 
 * Quiz main area where the category is shown in the title, the question is displayed underneath and a slider to select the answer within a certain range and a submit button to submit the answer. The user's choice is shown as they move the slider
@@ -156,22 +156,28 @@ The main features of the website are
 * A score box where the user's points are recorded and updated
 
 <p align="center">
-<img src="documentation/features/quiz-main-area.png" alt="quiz-window" width="70%">
+<img src="documentation/features/quiz-main-area.png" alt="quiz-window" width="50%">
 </p>
 
 * A modal winow "Game Over!" when the user inputs a wrong answer
 
 <p align="center">
-<img src="documentation/features/modal-loss.png" alt="modal-window-loss" width="70%">
+<img src="documentation/features/modal-loss.png" alt="modal-window-loss" width="50%">
 </p>
 
 
 * A modal winow "Congrats!" when the user answers all answers correctly
 
 <p align="center">
-<img src="documentation/features/modal-win.png" alt="modal-window-win" width="70%">
+<img src="documentation/features/modal-win.png" alt="modal-window-win" width="50%">
 </p>
 
+* About and contact pages to provide more context and depth to the website by providing form to the user to fill and information to read about the website. These pages also have buttons to navigate to the homepage
+
+<p align="center">
+<img src="documentation/features/contact.png" alt="contact-page" width="50%"> <br><br>
+<img src="documentation/features/about.png" alt="about-page" width="50%">
+</p>
 
 
 
@@ -215,9 +221,11 @@ The main features of the website are
 
 * [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to simulate other accessibility needs
 
-* [Color Picker](https://imagecolorpicker.com/en)
+* [Color Picker](https://imagecolorpicker.com/en) for choosing colors from color palettes
 
-* [balsamiq](https://balsamiq.com/)
+* [balsamiq](https://balsamiq.com/) for wireframes
+
+* [JSON](https://www.json.org/json-en.html) for writing the questions database
 
 
 - - -
