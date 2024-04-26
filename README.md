@@ -235,12 +235,33 @@ The main features of the website are
 
 ### Validator Testing
 
-* [HTML Validator](https://validator.w3.org/) result for all the `.html` files showed no errors or warnings.
+* [HTML Validator](https://validator.w3.org/) result for the `.html` files were as following:
+    
+    * For the index or home page
 
-<p align="center">
-<img src="documentation/testing/html-validator.png" alt="html validation" width="90%">
-</p>
+    <p align="center">
+    <img src="documentation/testing/html-validator-index.png" alt="html-validation-index" width="80%">
+    </p>
 
+    * For the quiz pages (all categories) showed the same warnings
+
+    <p align="center">
+    <img src="documentation/testing/html-validator-quiz-pages.png" alt="html-validation-quiz" width="80%">
+    </p>
+
+    * For the contact page
+
+    <p align="center">
+    <img src="documentation/testing/html-validator-contact.png" alt="html-validation-contact" width="80%">
+    </p>
+
+    * For the about page
+
+    <p align="center">
+    <img src="documentation/testing/html-validator-about.png" alt="html-validation-about" width="80%">
+    </p>
+
+As seen, there are no errors and only warnings of no heading was obtained. This does not affect the functionality of the website by any means.
 
 * [CSS Validator](https://jigsaw.w3.org/css-validator/) result for the `.css` file showed no errors, however it showed 3 warnings related to the importing of google fonts - which do not affect the deployment of the website by any means
 
