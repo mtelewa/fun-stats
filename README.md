@@ -360,7 +360,7 @@ The following test cases were performed on each page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Internal navigation | User is the home page | mouse click | gets directed to the home page | Pass |
+| Internal navigation in the same tab | User is the home page | mouse click | gets directed to the home page | Pass |
 
 
 * Contact page
