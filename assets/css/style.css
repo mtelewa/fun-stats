@@ -506,7 +506,7 @@ textarea {
 @media screen and (min-width:1024px) {
 
     #categories {
-        width: 100%;
+        width: 80vw;
     }
 
     #game-rules-box {
@@ -525,3 +525,15 @@ textarea {
 }
 
 
+@media screen and (min-width:1440px) {
+    #categories {
+        width: 80vw;
+    }
+
+}
+
+@media screen and (min-width:1920px) {
+    #categories {
+        width: 100vw;
+    }
+}
