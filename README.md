@@ -240,25 +240,25 @@ The main features of the website are
     * For the index or home page
 
     <p align="center">
-    <img src="documentation/testing/html-validator-index.png" alt="html-validation-index" width="80%">
+    <img src="documentation/testing/html-validator-index.png" alt="html-validation-index" width="90%">
     </p>
 
     * For the quiz pages (all categories) showed the same warnings
 
     <p align="center">
-    <img src="documentation/testing/html-validator-quiz-pages.png" alt="html-validation-quiz" width="80%">
+    <img src="documentation/testing/html-validator-quiz-pages.png" alt="html-validation-quiz" width="90%">
     </p>
 
     * For the contact page
 
     <p align="center">
-    <img src="documentation/testing/html-validator-contact.png" alt="html-validation-contact" width="80%">
+    <img src="documentation/testing/html-validator-contact.png" alt="html-validation-contact" width="90%">
     </p>
 
     * For the about page
 
     <p align="center">
-    <img src="documentation/testing/html-validator-about.png" alt="html-validation-about" width="80%">
+    <img src="documentation/testing/html-validator-about.png" alt="html-validation-about" width="90%">
     </p>
 
 As seen, there are no errors and only warnings of no heading was obtained. This does not affect the functionality of the website by any means.
@@ -266,7 +266,7 @@ As seen, there are no errors and only warnings of no heading was obtained. This 
 * [CSS Validator](https://jigsaw.w3.org/css-validator/) result for the `.css` file showed no errors, however it showed 9 warnings related to the importing of google fonts and using vendor extensions. These warnings do not affect the deployment of the website by any means
 
 <p align="center">
-<img src="documentation/testing/css-validation.png" alt="css validation" width="70%">
+<img src="documentation/testing/css-validation.png" alt="css validation" width="80%">
 </p>
 
 <p align="center">
@@ -278,19 +278,19 @@ As seen, there are no errors and only warnings of no heading was obtained. This 
 </p>
 
 <p align="center">
-<img src="documentation/testing/css-warnings.png" alt="css validation" width="70%">
+<img src="documentation/testing/css-warnings.png" alt="css validation" width="80%">
 </p>
 
 * [JavaScript Validator](https://jshint.com/) result for the `.js` file showed no errors, however it showed 8 warnings, all on one line where the database is imported. These warnings do not affect the logic handling, datastructure or flow control of the script.
 
 <p align="center">
-<img src="documentation/testing/js-validator.png" alt="js-validation" width="40%">
+<img src="documentation/testing/js-validator.png" alt="js-validation" width="50%">
 </p>
 
 * [JSON Validator](https://jsonlint.com/) showed that the JSON file is valid
 
 <p align="center">
-<img src="documentation/testing/json-validator.png" alt="json-validation" width="40%">
+<img src="documentation/testing/json-validator.png" alt="json-validation" width="50%">
 </p>
 
 
