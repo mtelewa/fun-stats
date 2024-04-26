@@ -343,7 +343,7 @@ The following test cases were performed on each page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Website title | link directs the user back to the home page | click title | home page reloads | Pass |
+| Category hover with zoom | image and text are zoomed and box gets highlighted | mouse hover | image and text are zoomed and box shadow color changes | Pass |
 
 
 
