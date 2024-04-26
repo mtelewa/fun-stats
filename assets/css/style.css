@@ -529,10 +529,10 @@ textarea {
     #categories {
         width: 80vw;
     }
-
 }
 
-@media screen and (min-width:1920px) {
+
+@media screen and (min-width:1500px) {
     #categories {
         width: 100vw;
     }

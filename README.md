@@ -109,15 +109,26 @@ The website is as accessible as possible. Specifically by following these good-p
 * Accessible Rich Internet Applications (Aria) labels on interactive elements, links and icons
 * Semantic HTML
 * Using a hover state on all buttons on the website
+* Sufficient color contrast throughout the website
 
+I used the chrome extension [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to check for **total** as well as **Yellow-blue color blindness (Tritanopia)** color blindness. The latter was checked as blue is the prevailing color throughout the website. The reults are shown here, respectively.
 
+<p align="center">
+<img src="documentation/design/total-color-blindness.png" alt="total blindness" width="70%">
+<img src="documentation/design/tritanopia.png" alt="tritanopia" width="70%">
+</p>
+
+As can be seen, there is still enough contrast between the text and the background.
 
 - - - 
 
 ### Features
 
 The website consists of 
-* 
+* Home page with quick links to different quiz categories, contact and about pages
+* Four categories pages to display quiz questions, slider and score
+* Contact page to message the website hosts
+* About page to explain what the website is about and what it aims at
 
 The main features of the website are
 
@@ -127,7 +138,9 @@ The main features of the website are
 
 * Future Implementations that shall allow returning and frequent users to visit more often
 
-    *  After getting 10 correct answers, the difficulty level goes up, so now your answer has to be the exact correct answer. 
+    * After getting 10 correct answers, the difficulty level goes up, so now your answer has to be the exact correct answer
+    * Showing users the total points they could have got if they answered all questions precisely
+    * Score leaderboard to make the quiz app more competitive between users
 
 - - -
 
@@ -247,15 +260,15 @@ Note: For step no.4 to work, first generate SSH keys and add your generated key 
 
 ### Code Used
 
-* Hover to zoom effect [snippet](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
-* Add hyperlink to background image [snippet](https://stackoverflow.com/questions/3778611/how-do-i-add-a-hyperlink-to-a-background-image)
-* Modal window [snippet](https://www.w3schools.com/howto/howto_css_modals.asp)
-* Create an array with random numbers [snippet](https://stackoverflow.com/questions/5836833/create-an-array-with-random-values)
-* Slider styling [snippet](https://blog.logrocket.com/creating-custom-css-range-slider-javascript-upgrades/)
+* Hover to zoom effect [CSS snippet](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
+* Add hyperlink to background image [HTML snippet](https://stackoverflow.com/questions/3778611/how-do-i-add-a-hyperlink-to-a-background-image)
+* Modal window [CSS and JS snippets](https://www.w3schools.com/howto/howto_css_modals.asp)
+* Create an array with random numbers [JS snippet](https://stackoverflow.com/questions/5836833/create-an-array-with-random-values)
+* Slider styling [CSS snippet](https://blog.logrocket.com/creating-custom-css-range-slider-javascript-upgrades/)
 
 ### Content
 
-* 
+* The questions were a collection of my own inquiries in addition to some help from OpenAI's [GPT](https://chat.openai.com/). It is important to note that GPT was used solely for the purpose of acquiring some questions and **NOT** for debugging or writing code. Additionally, all the facts and answers were checked through basic research.
 
 ### Media
 
