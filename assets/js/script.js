@@ -284,9 +284,16 @@ function handleFormSubmit(event) {
    as the data is submitted to a server via an HTTP GET or POST request,
    This function stops the default action of an element */
   event.preventDefault();
-  console.log('sdasds')  
   // loginForm.submit();	// submit the form through JS
-  window.open("thanks.html", "_self");
+  let name = document.getElementById("fname").value
+  // check if name has numbers
+  // adapted from: https://stackoverflow.com/questions/5778020/check-whether-an-input-string-contains-a-number-in-javascript
+  var hasNumber = /\d/;  
+  if (hasNumber.test(name)) {
+     alert(`${name} is not a valid Name!`);
+  } else {
+    window.open("thanks.html", "_self");
+  }
 }
 
 let loginForm = document.getElementById('contact-form');
