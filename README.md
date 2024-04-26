@@ -235,6 +235,30 @@ The main features of the website are
 
 ### Validator Testing
 
+* [HTML Validator](https://validator.w3.org/) result for all the `.html` files showed no errors or warnings.
+
+<p align="center">
+<img src="documentation/testing/html-validator.png" alt="html validation" width="90%">
+</p>
+
+
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) result for the `.css` file showed no errors, however it showed 3 warnings related to the importing of google fonts - which do not affect the deployment of the website by any means
+
+<p align="center">
+<img src="documentation/testing/css-validation.png" alt="css validation" width="90%">
+</p>
+
+<p align="center">
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
+<p align="center">
+<img src="documentation/testing/css-warnings.png" alt="css validation" width="90%">
+</p>
 
 
 ### Browser Compatibility

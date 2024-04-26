@@ -132,6 +132,9 @@ h2, h3 {
 #game-rules-heading {
     cursor: pointer;
     padding-top: 15px;
+    font-family: "Indie Flower", serif;
+    font-size: 250%;
+    font-weight: 600;
 }
 
 /* Target all game rules descendents*/
@@ -231,6 +234,9 @@ button {
     cursor: pointer;
     display: block;
     font-size: 0.6rem;
+    font-family: "Indie Flower", serif;
+    font-size: 150%;
+    font-weight: 600;
 }
 
 #submit-button {
@@ -419,11 +425,12 @@ textarea {
     box-shadow: 5px 5px 0px rgb(0 0 0 / 0.2);
     width: 200px;
     margin-top: 10px;
+    padding: 10px 5px;
+    font-family: Platypi, serif;
+    font-size: 20px;
+    font-weight: 100px;
 }
 
-#modal-buttons p {
-    padding: 10px 5px;
-}
 
 .modal-button:hover,
 #home-button:hover,
