@@ -132,8 +132,28 @@ The website consists of
 
 The main features of the website are
 
-* 
+* A **favicon** in the browser tab.
 
+<p align="center">
+<img src="documentation/features/favicon.png" alt="favicon" width="30%">
+</p>
+
+* Easily accessible icons to choose a category through text or image. Also the icons have zoom and hover effect to highlight what category the user is about to select.
+
+<p align="center">
+<img src="documentation/features/hover-icons.png" alt="hover-zoom-effect" width="90%">
+</p>
+
+*  **Toggle dialog box** to present additional information regarding game rules **without filling the page with text**.
+
+<p align="center">
+<img src="documentation/features/toggle-box-closed.png" alt="togle-box-closed" width="90%"> <br><br>
+<img src="documentation/features/toggle-box-open.png" alt="togle-box-closed" width="90%">
+</p>
+
+* Quiz main area where the category is shown in the title, the question is displayed underneath and a slider to select the answer within a certain range and a submit button to submit the answer. The user's choice is shown as they move the slider
+
+* A score box where user's points are recorded and updated
 
 
 * Future Implementations that shall allow returning and frequent users to visit more often
