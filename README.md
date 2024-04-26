@@ -281,6 +281,18 @@ As seen, there are no errors and only warnings of no heading was obtained. This 
 <img src="documentation/testing/css-warnings.png" alt="css validation" width="70%">
 </p>
 
+* [JavaScript Validator](https://jshint.com/) result for the `.js` file showed no errors, however it showed 8 warnings, all on one line where the database is imported. These warnings do not affect the logic handling, datastructure or flow control of the script.
+
+<p align="center">
+<img src="documentation/testing/js-validator.png" alt="js-validation" width="40%">
+</p>
+
+* [JSON Validator](https://jsonlint.com/) showed that the JSON file is valid
+
+<p align="center">
+<img src="documentation/testing/json-validator.png" alt="json-validation" width="40%">
+</p>
+
 
 ### Browser Compatibility
 
