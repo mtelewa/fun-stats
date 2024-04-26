@@ -339,7 +339,7 @@ The website scores very high on accessibility, best practices and search engine 
 
 The following test cases were performed on each page
 
-`index.html`
+* `index.html`
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -347,6 +347,28 @@ The following test cases were performed on each page
 | Toggle box for the game rules | Box opens with game rules when clicked | mouse click | game rules are displayed | Pass |
 | Internal navigation | User is directed to About, Contact and category pages | mouse click | gets directed to the respective page | Pass |
 | External navigation | User is directed to social media pages | mouse click | gets directed to the respective page in a new tab | Pass |
+
+* Quiz pages
+
+
+
+
+
+
+
+* About page
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Internal navigation | User is the home page | mouse click | gets directed to the home page | Pass |
+
+
+* Contact page
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Internal navigation | User is the home page | mouse click | gets directed to the home page | Pass |
+
 
 
 ### Known Bugs
